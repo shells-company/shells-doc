@@ -24,32 +24,28 @@ Get your documentation site running locally and make your first customization.
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### Step 2: Make your first change
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
 <Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  1. Open `docs.json` in your editor.
+  2. Change the `"name"` field to your project name.
+  3. Update the `"colors"` to match your brand.
+  4. Save and see your changes instantly at `http://localhost:3000`.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+  <Tip>Try changing the primary color to see an immediate difference!</Tip>
+</Accordion>
 
 ### Step 3: Go live
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<AccordionGroup>
+  <Accordion icon="github" title="Install the GitHub app">
+    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app). This automatically deploys your changes whenever you push to your repository.
+  </Accordion>
+  <Accordion icon="rocket" title="Publish your docs">
+    1. Commit and push your changes.
+    2. Your docs will be live in moments!
+  </Accordion>
+</AccordionGroup>
 
 ## Next steps
 
