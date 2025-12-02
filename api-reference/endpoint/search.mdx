@@ -1,0 +1,42 @@
+---
+title: "Search codebase"
+openapi: "POST /search"
+---
+
+Use this endpoint to search the codebase using customizable search commands.
+
+## Overview
+
+The search endpoint allows you to query the codebase with flexible search parameters. By default, it uses `grep` for searching, but you can specify any arbitrary search command to customize the search behavior.
+
+## Request body
+
+<ParamField body="dataset" type="string" required>
+  The search query string to match against the codebase.
+</ParamField>
+
+<ParamField body="command" type="string" default="grep">
+  The search command to use. Supports any arbitrary search string. Defaults to `grep` if not specified.
+</ParamField>
+
+<ParamField body="flags" type="string">
+  Optional flags to pass to the search command.
+</ParamField>
+
+<ParamField body="folder_filter" type="string">
+  Optional folder path to limit the search scope.
+</ParamField>
+
+## Example
+
+```bash
+curl -X POST https://sandbox.mintlify.com/search \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "function",
+    "command": "ripgrep",
+    "flags": "-i",
+    "folder_filter": "src/"
+  }'
+```
