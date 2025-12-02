@@ -265,8 +265,11 @@
             "type": "string"
           },
           "folder_filter": {
-            "description": "Optional folder path to limit the search scope.",
-            "type": "string"
+            "description": "Optional folders to filter the search scope.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
