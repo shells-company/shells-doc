@@ -244,6 +244,64 @@
             "type": "string"
           }
         }
+      },
+      "GrepSearchPayload": {
+        "required": [
+          "dataset"
+        ],
+        "type": "object",
+        "properties": {
+          "dataset": {
+            "description": "The search query string to match against the codebase.",
+            "type": "string"
+          },
+          "command": {
+            "description": "The search command to use. Supports any arbitrary search string. Defaults to \"grep\" if not specified.",
+            "type": "string",
+            "default": "grep"
+          },
+          "flags": {
+            "description": "Optional flags to pass to the search command.",
+            "type": "string"
+          },
+          "folder_filter": {
+            "description": "Optional folder path to limit the search scope.",
+            "type": "string"
+          }
+        }
+      },
+      "SearchResult": {
+        "type": "object",
+        "properties": {
+          "matches": {
+            "description": "Array of matching results from the search.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchMatch"
+            }
+          },
+          "total_count": {
+            "description": "Total number of matches found.",
+            "type": "integer"
+          }
+        }
+      },
+      "SearchMatch": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "description": "The file path where the match was found.",
+            "type": "string"
+          },
+          "line": {
+            "description": "The line number of the match.",
+            "type": "integer"
+          },
+          "content": {
+            "description": "The matching line content.",
+            "type": "string"
+          }
+        }
       }
     },
     "securitySchemes": {
