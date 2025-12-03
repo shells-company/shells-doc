@@ -1,0 +1,62 @@
+---
+title: 'Search'
+description: 'Search datasets using customizable commands'
+---
+
+## Overview
+
+The search endpoint allows you to search through datasets using grep or any arbitrary search command. This provides flexibility for different search use cases and patterns.
+
+## Endpoint
+
+```
+POST /api/search
+```
+
+## Request body
+
+<ParamField body="dataset" type="string" required>
+  The name of the dataset to search.
+</ParamField>
+
+<ParamField body="flags" type="string" required>
+  Flags to pass to the search command (e.g., `-r -n -i` for recursive, line numbers, and case-insensitive search).
+</ParamField>
+
+<ParamField body="folder_filter" type="string[]" required>
+  Optional folders to filter the search. For example, `["___private", "___user_auth"]`.
+</ParamField>
+
+<ParamField body="command" type="string">
+  The search command to use. Defaults to `grep` if not specified. You can use any arbitrary search command available on the system.
+</ParamField>
+
+## Example request
+
+```bash
+curl -X POST https://api.example.com/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "my-dataset",
+    "flags": "-r -n -i",
+    "folder_filter": ["src", "lib"],
+    "command": "grep"
+  }'
+```
+
+## Using custom commands
+
+The `command` parameter allows you to specify any search command instead of the default `grep`. This is useful when you need specialized search functionality.
+
+```json
+{
+  "dataset": "my-dataset",
+  "flags": "-r --include='*.rs'",
+  "folder_filter": [],
+  "command": "rg"
+}
+```
+
+<Note>
+  The command must be available on the server. Common alternatives to grep include `rg` (ripgrep), `ag` (the silver searcher), and `ack`.
+</Note>
