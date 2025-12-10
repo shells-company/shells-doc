@@ -8,6 +8,12 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "fonts": {
+    "family": "Atkinson",
+    "source": "/fonts/atkinson-regular.woff",
+    "format": "woff",
+    "weight": 400
+  },
   "navigation": {
     "tabs": [
       {
@@ -18,7 +24,8 @@
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "development",
+              "ai-tools/2"
             ]
           },
           {
