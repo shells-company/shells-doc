@@ -1,0 +1,72 @@
+---
+title: 'Extra data'
+description: 'Additional data and configuration options for the search API'
+---
+
+## Additional configuration
+
+This page covers extra data and advanced configuration options for the search endpoint.
+
+## Response format
+
+The search endpoint returns results in the following format:
+
+```json
+{
+  "results": [
+    "path/to/file.txt:10:matching line content",
+    "path/to/another.txt:25:another matching line"
+  ]
+}
+```
+
+Each result string contains:
+- **File path** - The path to the file containing the match
+- **Line number** - The line number where the match was found
+- **Content** - The actual line content with the match
+
+## Advanced flags
+
+Here are some commonly used flags for different search commands:
+
+### grep flags
+
+| Flag | Description |
+|------|-------------|
+| `-r` | Recursive search |
+| `-n` | Show line numbers |
+| `-i` | Case-insensitive search |
+| `-l` | Only show file names |
+| `-c` | Count matches |
+
+### ripgrep flags
+
+| Flag | Description |
+|------|-------------|
+| `-r` | Recursive search (default) |
+| `-n` | Show line numbers |
+| `-i` | Case-insensitive search |
+| `-l` | Only show file names |
+| `--json` | Output in JSON format |
+
+## Error handling
+
+The search endpoint may return the following errors:
+
+| Status code | Description |
+|-------------|-------------|
+| `400` | Invalid request parameters |
+| `404` | Dataset not found |
+| `500` | Search command execution failed |
+
+## Rate limits
+
+Search requests are subject to the following rate limits:
+
+- **100 requests per minute** per API key
+- **Maximum 10 concurrent searches** per dataset
+
+## Related pages
+
+- [Search endpoint](/api-reference/endpoint/search) - Main search endpoint documentation
+- [Custom commands](/api-reference/custom-commands) - Using custom search commands
