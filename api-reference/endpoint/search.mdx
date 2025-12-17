@@ -1,0 +1,48 @@
+---
+title: 'Search'
+description: 'Search through datasets using grep or custom commands'
+---
+
+## POST /api/search
+
+Search through a dataset using grep or any arbitrary search command.
+
+### Request body
+
+<ParamField body="dataset" type="string" required>
+  The dataset to search within.
+</ParamField>
+
+<ParamField body="flags" type="string" required>
+  Flags to pass to the search command (e.g., `-r -n -i`).
+</ParamField>
+
+<ParamField body="folder_filter" type="string[]" required>
+  Optional folders to filter the search (e.g., `["___private", "___user_auth"]`).
+</ParamField>
+
+<ParamField body="command" type="string">
+  The search command to use. Defaults to `grep` if not specified. You can use any arbitrary search command like `rg` (ripgrep) or `ag` (silver searcher).
+</ParamField>
+
+### Example request
+
+```json
+{
+  "dataset": "my-dataset",
+  "flags": "-r -n -i",
+  "folder_filter": ["src", "lib"],
+  "command": "grep"
+}
+```
+
+### Example with custom command
+
+```json
+{
+  "dataset": "my-dataset",
+  "flags": "-r -n",
+  "folder_filter": [],
+  "command": "rg"
+}
+```
