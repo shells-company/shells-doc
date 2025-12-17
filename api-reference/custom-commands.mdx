@@ -1,0 +1,44 @@
+---
+title: 'Custom commands'
+description: 'A new and epic feature for arbitrary search commands'
+---
+
+<Note>
+  **New feature!** Custom commands support is now available in the search endpoint.
+</Note>
+
+## What's new
+
+The search endpoint now supports **any arbitrary search command** - not just `grep`. This epic new capability lets you use your favorite search tools like `ripgrep`, `silver searcher`, or any other command-line search utility.
+
+## How it works
+
+Simply pass the `command` parameter to the `/api/search` endpoint to specify which search tool to use:
+
+```json
+{
+  "dataset": "my-dataset",
+  "flags": "-r -n",
+  "folder_filter": [],
+  "command": "rg"
+}
+```
+
+## Supported commands
+
+You can use any search command available on the server, including:
+
+- **grep** - The classic Unix search tool (default)
+- **rg** - Ripgrep, a blazingly fast search tool
+- **ag** - The Silver Searcher, optimized for code search
+- Any other command-line search utility
+
+## Why this is cool
+
+- **Flexibility** - Use the search tool you're most comfortable with
+- **Performance** - Leverage faster tools like ripgrep for large datasets
+- **Compatibility** - Pass tool-specific flags for advanced search patterns
+
+## Get started
+
+Check out the [search endpoint documentation](/api-reference/endpoint/search) to start using custom commands in your searches.
