@@ -244,6 +244,48 @@
             "type": "string"
           }
         }
+      },
+      "SearchRequest": {
+        "required": [
+          "dataset",
+          "flags",
+          "folder_filter"
+        ],
+        "type": "object",
+        "properties": {
+          "dataset": {
+            "description": "The dataset to search within.",
+            "type": "string"
+          },
+          "flags": {
+            "description": "Flags to pass to the search command (e.g., `-r -n -i`).",
+            "type": "string"
+          },
+          "folder_filter": {
+            "description": "Folders to filter the search (e.g., `[\"src\", \"lib\"]`).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "command": {
+            "description": "The search command to use. Defaults to `grep` if not specified. You can use any arbitrary search command like `rg` (ripgrep) or `ag` (silver searcher).",
+            "type": "string",
+            "default": "grep"
+          }
+        }
+      },
+      "SearchResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "description": "The search results.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       }
     },
     "securitySchemes": {
