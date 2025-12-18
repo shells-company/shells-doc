@@ -1,0 +1,150 @@
+---
+title: 'Neo4j'
+description: 'Explore the power of graph databases with Neo4j'
+---
+
+## What is Neo4j?
+
+Neo4j is the world's leading graph database platform, designed to leverage data relationships as first-class entities. Unlike traditional relational databases that use tables and joins, Neo4j stores data as nodes and relationships, making it incredibly powerful for connected data.
+
+## Why Neo4j is cool
+
+### Native graph storage
+
+Neo4j stores data the way you think about it - as a network of connected entities. This native graph architecture delivers constant-time traversals regardless of total data size, meaning your queries stay fast even as your dataset grows to billions of nodes.
+
+### Cypher query language
+
+Neo4j's declarative query language, Cypher, is intuitive and expressive:
+
+```cypher
+MATCH (user:User)-[:PURCHASED]->(product:Product)
+WHERE user.name = 'Alice'
+RETURN product.name, product.price
+```
+
+This query finds all products purchased by Alice in a single, readable statement.
+
+### Real-time recommendations
+
+Build recommendation engines that actually understand context:
+
+```cypher
+MATCH (user:User {id: $userId})-[:PURCHASED]->(product:Product)
+      <-[:PURCHASED]-(otherUser:User)-[:PURCHASED]->(recommendation:Product)
+WHERE NOT (user)-[:PURCHASED]->(recommendation)
+RETURN recommendation, count(*) AS score
+ORDER BY score DESC
+LIMIT 10
+```
+
+### Fraud detection
+
+Detect complex fraud patterns by traversing relationship networks in milliseconds:
+
+```cypher
+MATCH (account:Account)-[:TRANSFERRED_TO*1..5]->(suspicious:Account {flagged: true})
+RETURN account, suspicious
+```
+
+### Knowledge graphs
+
+Power AI and machine learning applications with rich, interconnected knowledge:
+
+- Connect entities across domains
+- Enable semantic search
+- Support natural language understanding
+- Drive intelligent assistants
+
+## Key features
+
+| Feature | Description |
+|---------|-------------|
+| ACID compliance | Full transactional support for data integrity |
+| Horizontal scaling | Cluster deployments for high availability |
+| Graph algorithms | Built-in algorithms for pathfinding, centrality, and community detection |
+| Full-text search | Integrated Lucene-based search capabilities |
+| Visualization | Native graph visualization tools |
+
+## Use cases
+
+### Social networks
+
+Model and query social connections naturally:
+
+- Friend recommendations
+- Influence analysis
+- Community detection
+- Content personalization
+
+### Supply chain management
+
+Track products through complex supply chains:
+
+- Provenance tracking
+- Bottleneck identification
+- Risk assessment
+- Logistics optimization
+
+### Identity and access management
+
+Manage complex permission hierarchies:
+
+- Role-based access control
+- Permission inheritance
+- Audit trails
+- Compliance reporting
+
+### Network and IT operations
+
+Map and monitor infrastructure:
+
+- Dependency mapping
+- Impact analysis
+- Root cause analysis
+- Capacity planning
+
+## Getting started
+
+Install Neo4j locally or use Neo4j Aura (cloud):
+
+```bash
+# Using Docker
+docker run \
+  --name neo4j \
+  -p 7474:7474 -p 7687:7687 \
+  -e NEO4J_AUTH=neo4j/password \
+  neo4j:latest
+```
+
+Connect and create your first nodes:
+
+```cypher
+CREATE (alice:Person {name: 'Alice', age: 30})
+CREATE (bob:Person {name: 'Bob', age: 25})
+CREATE (alice)-[:KNOWS {since: 2020}]->(bob)
+RETURN alice, bob
+```
+
+## Performance benchmarks
+
+Neo4j excels at relationship-heavy queries:
+
+- **1000x faster** than relational databases for connected queries
+- **Constant time** traversals regardless of data size
+- **Sub-millisecond** response times for real-time applications
+
+## Integration ecosystem
+
+Neo4j integrates with your existing stack:
+
+- **Languages**: Python, JavaScript, Java, .NET, Go
+- **Frameworks**: Spring Data, Django, Express
+- **Visualization**: Bloom, Gephi, D3.js
+- **Data science**: Pandas, Spark, Jupyter
+
+## Learn more
+
+- [Neo4j Documentation](https://neo4j.com/docs/)
+- [Cypher Manual](https://neo4j.com/docs/cypher-manual/)
+- [Graph Academy](https://graphacademy.neo4j.com/)
