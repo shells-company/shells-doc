@@ -14,7 +14,6 @@
     "format": "woff",
     "weight": 400
   },
-  "public": true,
   "navigation": {
     "tabs": [
       {
@@ -35,7 +34,7 @@
           },
           {
             "group": "Customization",
-            "hidden": true,
+            "hidden": false,
             "pages": [
               "essentials/settings",
               "essentials/navigation"
@@ -52,7 +51,7 @@
           },
           {
             "group": "AI tools",
-            "public": false,
+            "public": true,
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
