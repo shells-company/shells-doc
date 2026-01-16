@@ -79,6 +79,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "PrimeRL Deubgging",
+        "groups": [
+          {
+            "group": "PrimeIndex",
+            "pages": [
+              "prime-rl/index"
+            ]
+          }
+        ]
       }
     ],
     "global": {
