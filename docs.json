@@ -21,6 +21,7 @@
         "groups": [
           {
             "group": "Getting started",
+            "public": true,
             "pages": [
               "index",
               "quickstart",
@@ -35,6 +36,7 @@
           {
             "group": "Customization",
             "hidden": true,
+            "public": true,
             "pages": [
               "essentials/settings",
               "essentials/navigation"
@@ -42,6 +44,7 @@
           },
           {
             "group": "Writing content",
+            "public": true,
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -65,12 +68,14 @@
         "groups": [
           {
             "group": "API documentation",
+            "public": true,
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
             "group": "Endpoint examples",
+            "public": true,
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -85,6 +90,7 @@
         "groups": [
           {
             "group": "PrimeIndex",
+            "public": true,
             "pages": [
               "prime-rl/index"
             ]
