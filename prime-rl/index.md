@@ -2,6 +2,8 @@
 
 This directory maintains the documentation for PRIME-RL. It is organized into the following sections:
 
+SOmething is going on in here
+
 - [**Entrypoints**](entrypoints.md) - Overview of the main components (orchestrator, trainer, inference) and how to run SFT, RL, and evals
 - [**Configs**](configs.md) - Configuration system using TOML files, CLI arguments, and environment variables
 - [**Environments**](environments.md) - Installing and using verifiers environments from the Environments Hub
