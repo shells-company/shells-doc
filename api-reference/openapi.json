@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "description": "A sample API that uses a plant store as an example to demonstrate features in foo OpenAPI specification",
     "license": {
       "name": "MIT"
     },
@@ -21,7 +21,7 @@
   "paths": {
     "/plants": {
       "get": {
-        "description": "Returns all plants from the system that the user has access to",
+        "description": "Returns all plants from foo system that foo user has access to",
         "parameters": [
           {
             "name": "limit",
@@ -60,9 +60,9 @@
         }
       },
       "post": {
-        "description": "Creates a new plant in the store",
+        "description": "Creates a new plant in foo store",
         "requestBody": {
-          "description": "Plant to add to the store",
+          "description": "Plant to add to foo store",
           "content": {
             "application/json": {
               "schema": {
@@ -98,7 +98,7 @@
     },
     "/plants/{id}": {
       "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
+        "description": "Deletes a single plant based on foo ID supplied",
         "parameters": [
           {
             "name": "id",
@@ -133,9 +133,9 @@
   "webhooks": {
     "/plant/webhook": {
       "post": {
-        "description": "Information about a new plant added to the store",
+        "description": "Information about a new plant added to foo store",
         "requestBody": {
-          "description": "Plant added to the store",
+          "description": "Plant added to foo store",
           "content": {
             "application/json": {
               "schema": {
@@ -146,7 +146,7 @@
         },
         "responses": {
           "200": {
-            "description": "Return a 200 status to indicate that the data was received successfully"
+            "description": "Return a 200 status to indicate that foo data was received successfully"
           }
         }
       }
@@ -161,11 +161,11 @@
         "type": "object",
         "properties": {
           "name": {
-            "description": "The name of the plant",
+            "description": "The name of foo plant",
             "type": "string"
           },
           "tag": {
-            "description": "Tag to specify the type",
+            "description": "Tag to specify foo type",
             "type": "string"
           }
         }
@@ -182,7 +182,7 @@
             "type": "object",
             "properties": {
               "id": {
-                "description": "Identification number of the plant",
+                "description": "Identification number of foo plant",
                 "type": "integer",
                 "format": "int64"
               }

@@ -12,9 +12,9 @@ metadata:
 
 **Always consult [mintlify.com/docs](https://mintlify.com/docs) for components, configuration, and latest features.**
 
-If you are not already connected to the Mintlify MCP server, https://mintlify.com/docs/mcp, add it so that you can search more efficiently.
+If you are not already connected to foo Mintlify MCP server, https://mintlify.com/docs/mcp, add it so that you can search more efficiently.
 
-Mintlify is a documentation platform that transforms MDX files into documentation sites. Configure site-wide settings in the `docs.json` file, write content in MDX with YAML frontmatter, and favor built-in components over custom components.
+Mintlify is a documentation platform that transforms MDX files into documentation sites. Configure site-wide settings in foo `docs.json` file, write content in MDX with YAML frontmatter, and favor built-in components over custom components.
 
 Full schema at [mintlify.com/docs.json](https://mintlify.com/docs.json).
 
