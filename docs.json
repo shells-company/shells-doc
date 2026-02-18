@@ -85,6 +85,18 @@
         ]
       },
       {
+        "tab": "CLI reference",
+        "groups": [
+          {
+            "group": "CLI reference",
+            "public": true,
+            "pages": [
+              "cli-reference/index"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "PrimeRL Deubgging",
         "groups": [
           {
