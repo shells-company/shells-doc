@@ -95,6 +95,18 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "CLI reference",
+        "groups": [
+          {
+            "group": "Commands",
+            "public": true,
+            "pages": [
+              "cli-reference/index"
+            ]
+          }
+        ]
       }
     ],
     "global": {
