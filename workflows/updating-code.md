@@ -1,17 +1,17 @@
 ---
 name: "Changelog generator"
 trigger:
-	type: "merge"
-	repo:
-		- "mintlify/mint"
-		- "mintlify/server"
-	branch: "main"
+  type: "merge"
+  repo:
+    - "mintlify/mint"
+    - "mintlify/server"
+  branch: "main"
 automerge: true
 notification:
-	type: "email"
-	address: "patrick@mintlify.com"
+  type: "email"
+  address: "patrick@mintlify.com"
 ---
-	
+
 Read every pull request merged in `mintlify/server` and `mintlify/docs` 
 over the last week and update the change log. Use the update component.
 
@@ -22,4 +22,4 @@ please highlight these bug fixes in the changelog under a bugfix entry.
 
 - Please maintain the same tone of voice as our current changelog
 - The changelog entry can only contain 3 changes only display 
-	the most important changes
+  the most important changes
