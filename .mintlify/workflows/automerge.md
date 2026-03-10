@@ -1,5 +1,5 @@
 ---
-name: Update changelog
+name: Counting Stars
 on:
   cron: "0 9 * * 1"
 context:
@@ -7,10 +7,13 @@ context:
 automerge: true
 ---
 
-Review all changes since the last changelog update. Draft a new changelog post with any new features, bug fixes, or breaking changes.
+Add information into this workflow file.
+This workflow file should be counting the stars.
 
-Include information about what a change is and how it affects users.
+A star is each time this has been invoked.
 
-Do not include any internal-only information or minor changes like bumping package versions or updating documentation.
+Keep the start counts below
 
-Success criteria: Someone who reads the changelog knows the most up to date information about the product including what changed and whether or not it affects them.
+1. Stars
+2. Stars
+3. Stars
