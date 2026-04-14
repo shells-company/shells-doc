@@ -91,7 +91,8 @@
             "group": "PrimeIndex",
             "public": true,
             "pages": [
-              "prime-rl/index"
+              "prime-rl/index",
+              "prime-rl/index2"
             ]
           }
         ]
