@@ -11,3 +11,5 @@ When a user asks for help with an API endpoint or needs code examples:
 3. Include proper authentication headers and required parameters
 4. Show both the request and expected response
 5. Link to the relevant API reference page for full documentation
+
+some more special info in here
