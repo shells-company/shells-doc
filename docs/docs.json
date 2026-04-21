@@ -119,7 +119,9 @@
             "public": true,
             "pages": [
               "prime-rl/index",
+              "prime-rl/padd",
               "prime-rl/index1-5",
+              "prime-rl/page-2",
               "prime-rl/index2",
               "prime-rl/index2-5",
               "prime-rl/nested/index2-7",
