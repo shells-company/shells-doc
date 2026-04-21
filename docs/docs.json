@@ -17,6 +17,19 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Testing",
+        "groups": [
+          {
+            "group": "Testing",
+            "public": true,
+            "pages": [
+              "testing/bad-html",
+              "testing/bad-frontmatter"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Guides",
         "groups": [
           {
