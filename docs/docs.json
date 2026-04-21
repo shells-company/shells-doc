@@ -115,6 +115,7 @@
             "group": "PrimeIndex",
             "public": true,
             "pages": [
+              "prime-rl/sleep-part",
               "prime-rl/batbat",
               "prime-rl/be-good",
               "prime-rl/sandwich",
