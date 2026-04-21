@@ -37,7 +37,6 @@
             "public": true,
             "pages": [
               "index",
-              "new_file",
               "another_page",
               "yet_another_page_please",
               "ok_final_page_now",
@@ -62,6 +61,7 @@
             "hidden": true,
             "public": true,
             "pages": [
+              "new_file",
               "essentials/starter",
               "essentials/site-map"
             ]
