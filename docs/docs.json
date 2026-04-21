@@ -24,7 +24,9 @@
             "public": true,
             "pages": [
               "testing/bad-html",
-              "testing/bad-frontmatter"
+              "testing/bad-frontmatter",
+              "testing/new-test-page",
+              "testing/another-test-file"
             ]
           }
         ]
