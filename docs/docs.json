@@ -116,6 +116,7 @@
             "public": true,
             "pages": [
               "prime-rl/be-good",
+              "prime-rl/sandwich",
               "prime-rl/padd",
               "prime-rl/26-index-wild",
               "prime-rl/burger",
