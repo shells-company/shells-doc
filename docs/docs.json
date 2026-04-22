@@ -44,7 +44,8 @@
           {
             "group": "Pages",
             "pages": [
-              "testing/page-persistence-ded"
+              "testing/page-persistence-ded",
+              "essentials/e2e-persist-1776879796733-b0woln"
             ]
           }
         ]
