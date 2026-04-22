@@ -28,6 +28,12 @@
               "testing/new-test-page",
               "testing/another-test-file"
             ]
+          },
+          {
+            "group": "Merges",
+            "pages": [
+              "testing/merge-testing"
+            ]
           }
         ]
       },
