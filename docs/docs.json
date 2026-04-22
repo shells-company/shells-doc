@@ -36,6 +36,12 @@
               "testing/merge-testing"
             ]
           }
+          {
+            "group": "Pages",
+            "pages": [
+              "testing/page-persistence"
+            ]
+          }
         ]
       },
       {
