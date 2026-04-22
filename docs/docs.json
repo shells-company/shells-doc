@@ -110,7 +110,8 @@
             "group": "API documentation",
             "public": true,
             "pages": [
-              "api-reference/introduction"
+              "api-reference/introduction",
+              "essentials/e2e-persist-1776878323797-b3492c"
             ]
           },
           {
