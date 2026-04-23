@@ -333,7 +333,8 @@
               "testing/remove-modify-1776981954017-vx0bdu",
               "testing/baseline-delete-1776985218040-efpzfz",
               "testing/git-modify-remove-1776985362940-n92iic",
-              "testing/nochange-modify-1776985490860-xq7hzr"
+              "testing/nochange-modify-1776985490860-xq7hzr",
+              "testing/e2e-persist-1776985779315-0lsgr3"
             ]
           },
           {
