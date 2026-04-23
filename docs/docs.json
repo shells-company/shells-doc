@@ -54,7 +54,10 @@
               "testing/nochange-modify-1776982012157-qecr1q",
               "testing/rename-old-1776983761538-h6r96h",
               "testing/rename-modify-old-1776983792393-7a9lg7",
-              "testing/git-modify-none-1776983821079-bb5398"
+              {
+                "page": "testing/git-modify-none-1776983821079-bb5398",
+                "icon": "book"
+              }
             ],
             "hidden": true
           },
