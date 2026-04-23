@@ -174,7 +174,10 @@
                 "icon": "book"
               },
               "testing/page-dupe-1776976123926",
-              "testing/git-modify-none-1776976168550"
+              {
+                "page": "testing/git-modify-none-1776976168550",
+                "icon": "book"
+              }
             ]
           },
           {
