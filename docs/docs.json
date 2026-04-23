@@ -162,7 +162,10 @@
               "testing/e2e-persist-1776900630384-ge86po",
               "testing/e2e-persist-1776909761597-sdsm10",
               "testing/e2e-multi-a-1776975757076-tc2hq5",
-              "testing/git-modify-none-1776975890253"
+              {
+                "page": "testing/git-modify-none-1776975890253",
+                "icon": "book"
+              }
             ]
           },
           {
