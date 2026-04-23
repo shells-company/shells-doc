@@ -58,7 +58,10 @@
                 "page": "testing/git-modify-none-1776983821079-bb5398",
                 "icon": "book"
               },
-              "testing/git-modify-none-1776985292822-x22hb8"
+              {
+                "page": "testing/git-modify-none-1776985292822-x22hb8",
+                "icon": "book"
+              }
             ],
             "hidden": true
           },
