@@ -42,7 +42,8 @@
               "testing/e2e-collision-1776975696657-u7phyq",
               "testing/e2e-group-field-1776975712812-oi13tq",
               "testing/page-dupe-1776975844765",
-              "testing/rename-old-1776975875568"
+              "testing/rename-old-1776975875568",
+              "testing/e2e-multi-b-1776976050672-kw2son"
             ],
             "hidden": true
           },
@@ -115,7 +116,8 @@
               "testing/e2e-persist-1776891492312-oovtrr",
               "testing/e2e-persist-1776891863786-htzy96",
               "testing/e2e-persist-1776907648709-687spz",
-              "testing/baseline-delete-1776975860698"
+              "testing/baseline-delete-1776975860698",
+              "testing/e2e-multi-a-1776976050672-kw2son"
             ]
           },
           {
