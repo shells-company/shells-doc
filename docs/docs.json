@@ -227,7 +227,10 @@
                 "icon": "star"
               },
               "testing/e2e-icon-target-1776976353759-9uqxd5",
-              "testing/e2e-icon-remove-1776976394401-31zvn4"
+              {
+                "page": "testing/e2e-icon-remove-1776976394401-31zvn4",
+                "icon": "star"
+              }
             ]
           },
           {
