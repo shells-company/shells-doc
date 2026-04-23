@@ -31,7 +31,10 @@
               "testing/e2e-persist-1776901977529-pn0xnm",
               "testing/e2e-persist-1776902350907-ef9zuv",
               "testing/e2e-persist-1776929813999-pw4h0i",
-              "testing/e2e-icon-change-1776975640468-ii4fhr"
+              {
+                "page": "testing/e2e-icon-change-1776975640468-ii4fhr",
+                "icon": "star"
+              }
             ]
           },
           {
