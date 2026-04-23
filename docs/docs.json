@@ -57,6 +57,7 @@
             "pages": [
               "testing/basic-page",
               "testing/page-persistence-ded",
+              "testing/icon-merge-testing",
               "essentials/e2e-persist-1776879796733-b0woln",
               "essentials/e2e-persist-1776881433091-umb431",
               "essentials/e2e-persist-1776881589369-0p2map",
