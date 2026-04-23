@@ -36,7 +36,10 @@
           {
             "group": "Merges",
             "pages": [
-              "testing/merge-testing",
+              {
+                "page": "testing/merge-testing",
+                "icon": "flag"
+              },
               "essentials/e2e-persist-1776879321516-pnboem",
               "essentials/e2e-persist-1776879504443-j3fqzo",
               "essentials/e2e-persist-1776879731466-lkmohp",
