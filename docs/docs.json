@@ -24,49 +24,8 @@
             "public": true,
             "pages": [
               "testing/bad-html",
-              "testing/bad-frontmatter",
-              "testing/another-test-file",
-              "essentials/e2e-persist-1776817137197-38wyrx",
-              "essentials/e2e-persist-1776878400293-03dy55",
-              "testing/e2e-persist-1776901977529-pn0xnm",
-              "testing/e2e-persist-1776902350907-ef9zuv",
-              "testing/e2e-persist-1776929813999-pw4h0i",
-              {
-                "page": "testing/e2e-icon-change-1776975640468-ii4fhr",
-                "icon": "star"
-              },
-              {
-                "page": "testing/e2e-icon-remove-1776975667579-mqbe2c",
-                "icon": "star"
-              },
-              "testing/e2e-collision-1776975696657-u7phyq",
-              "testing/e2e-group-field-1776975712812-oi13tq",
-              "testing/page-dupe-1776975844765",
-              "testing/rename-old-1776975875568",
-              "testing/e2e-multi-b-1776976050672-kw2son",
-              "testing/e2e-multi-1776976461315-glz300",
-              {
-                "page": "testing/git-modify-none-1776976575335",
-                "icon": "book"
-              },
-              "testing/e2e-persist-1776976631171-ibshly",
-              "testing/git-modify-rename-old-1776981855302-062id5",
-              "testing/nochange-modify-1776982012157-qecr1q",
-              "testing/rename-old-1776983761538-h6r96h",
-              "testing/rename-modify-old-1776983792393-7a9lg7",
-              {
-                "page": "testing/git-modify-none-1776983821079-bb5398",
-                "icon": "book"
-              },
-              {
-                "page": "testing/git-modify-none-1776985292822-x22hb8",
-                "icon": "book"
-              },
-              "testing/page-delete-both-1776985447355-2am9ww",
-              "testing/git-modify-editor-modify-1776990330806-qym5yx",
-              "testing/nochange-modify-1776990471859-pbwipz"
-            ],
-            "hidden": true
+              "testing/bad-frontmatter"
+            ]
           },
           {
             "group": "Merges",
@@ -75,11 +34,6 @@
                 "page": "testing/merge-testing",
                 "icon": "flag"
               },
-              "essentials/e2e-persist-1776879321516-pnboem",
-              "essentials/e2e-persist-1776879504443-j3fqzo",
-              "essentials/e2e-persist-1776879731466-lkmohp",
-              "essentials/e2e-persist-1776879760004-h2236s",
-              "essentials/e2e-persist-1776880348945-o5s285",
               "essentials/e2e-persist-1776880931479-6x6jgw",
               "testing/e2e-persist-1776884679777-q202yn",
               "testing/e2e-persist-1776890077858-8pjoht",
