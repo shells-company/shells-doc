@@ -17,6 +17,537 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Testing",
+        "groups": [
+          {
+            "group": "Testing",
+            "public": true,
+            "pages": [
+              "testing/bad-html",
+              "testing/bad-frontmatter",
+              "testing/another-test-file",
+              "essentials/e2e-persist-1776817137197-38wyrx",
+              "essentials/e2e-persist-1776878400293-03dy55",
+              "testing/e2e-persist-1776901977529-pn0xnm",
+              "testing/e2e-persist-1776902350907-ef9zuv",
+              "testing/e2e-persist-1776929813999-pw4h0i",
+              {
+                "page": "testing/e2e-icon-change-1776975640468-ii4fhr",
+                "icon": "star"
+              },
+              {
+                "page": "testing/e2e-icon-remove-1776975667579-mqbe2c",
+                "icon": "star"
+              },
+              "testing/e2e-collision-1776975696657-u7phyq",
+              "testing/e2e-group-field-1776975712812-oi13tq",
+              "testing/page-dupe-1776975844765",
+              "testing/rename-old-1776975875568",
+              "testing/e2e-multi-b-1776976050672-kw2son",
+              "testing/e2e-multi-1776976461315-glz300",
+              {
+                "page": "testing/git-modify-none-1776976575335",
+                "icon": "book"
+              },
+              "testing/e2e-persist-1776976631171-ibshly",
+              "testing/git-modify-rename-old-1776981855302-062id5",
+              "testing/nochange-modify-1776982012157-qecr1q",
+              "testing/rename-old-1776983761538-h6r96h",
+              "testing/rename-modify-old-1776983792393-7a9lg7",
+              {
+                "page": "testing/git-modify-none-1776983821079-bb5398",
+                "icon": "book"
+              },
+              {
+                "page": "testing/git-modify-none-1776985292822-x22hb8",
+                "icon": "book"
+              },
+              "testing/page-delete-both-1776985447355-2am9ww",
+              "testing/git-modify-editor-modify-1776990330806-qym5yx",
+              "testing/nochange-modify-1776990471859-pbwipz"
+            ],
+            "hidden": true
+          },
+          {
+            "group": "Merges",
+            "pages": [
+              {
+                "page": "testing/merge-testing",
+                "icon": "flag"
+              },
+              "essentials/e2e-persist-1776879321516-pnboem",
+              "essentials/e2e-persist-1776879504443-j3fqzo",
+              "essentials/e2e-persist-1776879731466-lkmohp",
+              "essentials/e2e-persist-1776879760004-h2236s",
+              "essentials/e2e-persist-1776880348945-o5s285",
+              "essentials/e2e-persist-1776880931479-6x6jgw",
+              "testing/e2e-persist-1776884679777-q202yn",
+              "testing/e2e-persist-1776890077858-8pjoht",
+              "testing/e2e-persist-1776891598301-x2fmw9",
+              "testing/e2e-persist-1776909057612-adl745",
+              "testing/e2e-persist-1776976236315-z3hvn8",
+              "testing/e2e-multi-a-1776976475534-aqyazl",
+              "testing/baseline-delete-1776981740759-7xodd1",
+              "testing/git-modify-add-target-1776981840709-t1rpgf",
+              "testing/baseline-delete-1776983747015-w0qwvw",
+              "testing/page-added-none-1776985197782-3ap3yc",
+              "testing/baseline-delete-1776990202270-oro9bl",
+              "testing/nochange-delete-1776990486108-waqhzc"
+            ]
+          },
+          {
+            "group": "Pages",
+            "pages": [
+              "testing/basic-page",
+              "testing/page-persistence-ded",
+              "testing/icon-merge-testing",
+              "essentials/e2e-persist-1776879796733-b0woln",
+              "essentials/e2e-persist-1776881433091-umb431",
+              "essentials/e2e-persist-1776881589369-0p2map",
+              "essentials/e2e-persist-1776881712916-zaug8w",
+              "essentials/e2e-persist-1776882014484-dysuwj",
+              "testing/e2e-persist-1776884058623-mw951o",
+              "testing/e2e-persist-1776884633111-njvmjg",
+              "testing/e2e-persist-1776888114533-vjykef",
+              "testing/e2e-persist-1776893804716-6hsayc",
+              "testing/e2e-persist-1776895328563-wi497h",
+              "testing/e2e-persist-1776902761868-m1p6c5",
+              "testing/e2e-persist-1776908950982-2pbw7q",
+              "testing/baseline-delete-1776976139252",
+              "testing/page-target-1776981925493-dxcjmm",
+              "testing/page-delete-both-1776981968334-8ldh6j",
+              "testing/page-added-none-1776983726281-dauqoo",
+              "testing/e2e-persist-1776984311053-me0xdk",
+              "testing/rename-rename-old-1776985249188-vyzbny",
+              "testing/rename-modify-old-1776985263367-dpbpu3",
+              "testing/remove-rename-old-1776985419093-3pqq0b",
+              "testing/remove-modify-1776990414367-87686n"
+            ]
+          },
+          {
+            "group": "struct-added-none-1776982041451-d0po8j",
+            "pages": []
+          },
+          {
+            "group": "struct-added-update-baseline-1776982058132-z1injo",
+            "pages": []
+          },
+          {
+            "group": "struct-added-delete-baseline-1776982072310-7b8k41",
+            "pages": []
+          },
+          {
+            "group": "struct-update-none-new-1776982086505-7a0spq",
+            "pages": []
+          },
+          {
+            "group": "struct-update-add-existing-1776982113025-0055qb",
+            "pages": []
+          },
+          {
+            "group": "struct-update-update-old-1776982127314-tnuj7n",
+            "pages": []
+          },
+          {
+            "group": "struct-update-delete-1776982141664-ggpdkq",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-add-existing-1776982182979-2ccyhe",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-update-old-1776982197228-s494am",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-delete-1776982211700-9orggw",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-update-old-1776982240902-01ivda",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-delete-1776982255281-uqd9cf",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1776984048998-d4ucjt",
+            "pages": []
+          },
+          {
+            "group": "struct-added-update-baseline-1776984065457-8dapkt",
+            "pages": []
+          },
+          {
+            "group": "struct-added-delete-baseline-1776984079964-br8byj",
+            "pages": []
+          },
+          {
+            "group": "struct-update-none-new-1776984094109-g89iwm",
+            "pages": []
+          },
+          {
+            "group": "struct-update-add-existing-1776984120675-3hb6dd",
+            "pages": []
+          },
+          {
+            "group": "struct-update-update-old-1776984134772-6r3pkq",
+            "pages": []
+          },
+          {
+            "group": "struct-update-delete-1776984149281-67hhw5",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-add-existing-1776984190169-w8sx50",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-update-old-1776984204357-ufa15i",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-delete-1776984218716-upam94",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-update-old-1776984247581-pqd18h",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-delete-1776984261844-5ity8n",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1776985519253-7u94e7",
+            "pages": []
+          },
+          {
+            "group": "struct-added-update-baseline-1776985535534-wkxz4v",
+            "pages": []
+          },
+          {
+            "group": "struct-added-delete-baseline-1776985549451-5sytrf",
+            "pages": []
+          },
+          {
+            "group": "struct-update-none-new-1776985563346-j2dmqp",
+            "pages": []
+          },
+          {
+            "group": "struct-update-add-existing-1776985589737-2m6pv0",
+            "pages": []
+          },
+          {
+            "group": "struct-update-update-old-1776985603826-ntfh69",
+            "pages": []
+          },
+          {
+            "group": "struct-update-delete-1776985618013-yi6wap",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-add-existing-1776985658855-lg9yry",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-update-old-1776985673103-9vay6s",
+            "pages": []
+          },
+          {
+            "group": "struct-delete-delete-1776985687170-u86si9",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-update-old-1776985715994-ebg6gr",
+            "pages": []
+          },
+          {
+            "group": "struct-nochange-delete-1776985730204-rp5pus",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1776990499244-l6wy3h",
+            "pages": []
+          },
+          {
+            "group": "struct-added-update-baseline-1776990515481-uxd24z",
+            "pages": []
+          },
+          {
+            "group": "struct-added-delete-baseline-1776990529545-crx6i0",
+            "pages": []
+          },
+          {
+            "group": "struct-update-none-new-1776990543655-gb1t90",
+            "pages": []
+          },
+          {
+            "group": "struct-update-add-existing-1776990570034-wbgye2",
+            "pages": []
+          },
+          {
+            "group": "struct-update-update-old-1776990584240-quowiv",
+            "pages": []
+          },
+          {
+            "group": "struct-update-delete-1776990598172-dcx0qm",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1777004254853-wjjl1p",
+            "pages": []
+          },
+          {
+            "group": "struct-added-update-baseline-1777004271930-90121m",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1777004309357-5t8ux8",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1777004532522-qihu6l",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1777004550094-nb9a4y",
+            "pages": []
+          },
+          {
+            "group": "struct-added-none-1777004576318-tqamx7",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting started",
+            "public": true,
+            "pages": [
+              "index",
+              "another_page",
+              "yet_another_page_please",
+              "ok_final_page_now",
+              "i_need_more_pages",
+              "one_final_page",
+              "sparkly-new-page",
+              "dev-environment",
+              "ai-tools/deprecated-tool-2",
+              "ai-tools/3",
+              "ai-tools/4",
+              "essentials/new-page",
+              "workflow-stars",
+              "ai-tools/title",
+              "ai-tools/bad-html",
+              "essentials/e2e-persist-1776841999394-zzl10p",
+              "testing/e2e-persist-1776884911925-h977cz",
+              "testing/e2e-persist-1776890304000-prf8ki",
+              "testing/e2e-persist-1776891492312-oovtrr",
+              "testing/e2e-persist-1776891863786-htzy96",
+              "testing/e2e-persist-1776907648709-687spz",
+              "testing/baseline-delete-1776975860698",
+              "testing/e2e-multi-a-1776976050672-kw2son",
+              "testing/rename-old-1776976560934",
+              "testing/rename-modify-old-1776981785489-6a28g9",
+              "testing/git-modify-editor-modify-1776981869622-24g2zm",
+              "testing/rename-rename-old-1776983778131-kbwyqm",
+              "testing/rename-delete-old-1776983806538-5y543y",
+              "testing/rename-delete-old-1776990261333-zyje75"
+            ]
+          },
+          {
+            "group": "Customization",
+            "hidden": true,
+            "public": true,
+            "pages": [
+              "new_file",
+              "essentials/starter",
+              "essentials/site-map",
+              "essentials/e2e-persist-1776814764927-f01mmf",
+              "essentials/e2e-persist-1776878799047-6krvxv",
+              "testing/e2e-persist-1776890490976-898yoi",
+              "testing/e2e-persist-1776891752620-dkzq7i",
+              "testing/e2e-persist-1776892812918-sx5p8o",
+              "testing/e2e-persist-1776896239940-hxue23",
+              "testing/e2e-persist-1776896410191-mipssy",
+              "testing/e2e-persist-1776896913278-tdnrpu",
+              "testing/e2e-persist-1776909154537-rwiyqi",
+              {
+                "page": "testing/e2e-icon-target-1776931736330-y5u7sy",
+                "icon": "beaker"
+              },
+              "testing/e2e-multi-b-1776975757076-tc2hq5",
+              "testing/e2e-group-field-1776976021836-0hqmph",
+              "testing/e2e-multi-1776976036240-xckxm0",
+              "testing/page-added-1776976108953",
+              "testing/rename-old-1776976153745",
+              "testing/page-added-1776976529974",
+              "testing/remove-rename-old-1776981939849-o3j4lv",
+              "testing/remove-modify-1776981954017-vx0bdu",
+              "testing/baseline-delete-1776985218040-efpzfz",
+              "testing/git-modify-remove-1776985362940-n92iic",
+              "testing/nochange-modify-1776985490860-xq7hzr",
+              "testing/e2e-persist-1776985779315-0lsgr3",
+              "testing/git-modify-rename-old-1776990316730-vfiu53",
+              "testing/git-modify-remove-1776990344775-dfh599"
+            ]
+          },
+          {
+            "group": "Writing content",
+            "public": true,
+            "pages": [
+              "essentials/writing",
+              "essentials/code",
+              "essentials/images",
+              "essentials/reusable-snippets",
+              "essentials/e2e-persist-1776817077127-icfueo",
+              "essentials/e2e-persist-1776881913780-gq13x1",
+              "testing/e2e-persist-1776883919253-hk6pll",
+              "testing/e2e-persist-1776890261886-vl8v78",
+              "testing/e2e-persist-1776890834018-fbi2uu",
+              "testing/e2e-persist-1776891172607-2qicqf",
+              "testing/e2e-persist-1776891538456-jk20d2",
+              "testing/e2e-persist-1776894271540-awomwp",
+              "testing/e2e-persist-1776895344025-rdjrr9",
+              "testing/e2e-persist-1776900630384-ge86po",
+              "testing/e2e-persist-1776909761597-sdsm10",
+              "testing/e2e-multi-a-1776975757076-tc2hq5",
+              {
+                "page": "testing/git-modify-none-1776975890253",
+                "icon": "book"
+              },
+              "testing/page-dupe-1776976123926",
+              {
+                "page": "testing/git-modify-none-1776976168550",
+                "icon": "book"
+              },
+              "testing/git-modify-remove-1776981883776-15vew0",
+              "testing/nochange-rename-old-1776981997893-0c4mxd",
+              "testing/remove-modify-1776983961388-3z6hbp",
+              "testing/nochange-delete-1776985504818-az4st1",
+              "testing/git-modify-add-target-1776990302204-vcr8o7",
+              "testing/page-target-1776990386032-kzj6z2"
+            ]
+          },
+          {
+            "group": "AI tools",
+            "public": true,
+            "pages": [
+              "ai-tools/cursor",
+              "ai-tools/cc-retired",
+              "ai-tools/windsurf",
+              "essentials/e2e-persist-1776815236635-7im43l",
+              "essentials/e2e-persist-1776882595656-xgb549",
+              "testing/e2e-persist-1776892230075-d67rw7",
+              "testing/e2e-persist-1776895933034-j8jwnt",
+              "testing/e2e-persist-1776902289812-weriv2",
+              "testing/e2e-persist-1776907305836-w5emr2",
+              "testing/e2e-persist-1776907534364-n8cw85",
+              "testing/e2e-persist-1776929673507-luw4m1",
+              {
+                "page": "testing/e2e-icon-remove-1776975980333-tj96uo",
+                "icon": "star"
+              },
+              "testing/e2e-multi-b-1776976475534-aqyazl",
+              "testing/page-added-none-1776981720301-yxxtqc",
+              "testing/rename-old-1776981755347-ag61h5",
+              "testing/rename-rename-old-1776981771475-7jqkp9",
+              "testing/git-modify-rename-old-1776983862519-ew6wt7",
+              "testing/git-modify-remove-1776983891026-9jgnfs",
+              "testing/page-target-1776983932529-76w4zl",
+              "testing/page-delete-both-1776983976433-8c8b1x",
+              "testing/nochange-rename-old-1776984005899-uwmzs5",
+              "testing/nochange-delete-1776984034479-1ki4aj",
+              "testing/remove-rename-old-1776990400316-75t5hz",
+              "testing/page-delete-both-1776990428568-4nskzm"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "groups": [
+          {
+            "group": "API documentation",
+            "public": true,
+            "pages": [
+              "api-reference/introduction",
+              "essentials/e2e-persist-1776878323797-b3492c",
+              "essentials/e2e-persist-1776878550042-e3nost",
+              "essentials/e2e-persist-1776880694043-4l2mvh",
+              "essentials/e2e-persist-1776881069981-4p16y1",
+              "testing/e2e-persist-1776884551542-sq4axz",
+              "testing/e2e-persist-1776885454244-bt7r3f",
+              "testing/e2e-persist-1776897148171-ew2w6k",
+              "testing/e2e-icon-target-1776975625749-wj1qa7",
+              "testing/e2e-multi-1776975740801-259h7u",
+              "testing/page-added-1776975829358",
+              {
+                "page": "testing/e2e-icon-target-1776975923697-wya6cy",
+                "icon": "star"
+              },
+              "testing/e2e-icon-target-1776976353759-9uqxd5",
+              {
+                "page": "testing/e2e-icon-remove-1776976394401-31zvn4",
+                "icon": "star"
+              },
+              "testing/baseline-delete-1776976546446",
+              "testing/nochange-delete-1776982026452-0gf3wh",
+              "testing/nochange-modify-1776984020290-38cl9q",
+              "testing/rename-old-1776985232758-2y0l9l",
+              "testing/git-modify-rename-old-1776985334229-d78tdk",
+              "testing/rename-old-1776990216789-b36twg",
+              "testing/rename-rename-old-1776990233088-8u487r",
+              {
+                "page": "testing/git-modify-none-1776990275754-t05msy",
+                "icon": "book"
+              }
+            ]
+          },
+          {
+            "group": "Endpoint examples",
+            "public": true,
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook",
+              "essentials/e2e-persist-1776816411183-opm738",
+              "essentials/e2e-persist-1776818085569-ssyflk",
+              "essentials/e2e-persist-1776841868043-4d8hcd",
+              "essentials/e2e-persist-1776882296561-350ftv",
+              "testing/e2e-persist-1776884145104-amvuia",
+              "testing/e2e-persist-1776892015193-4gq7x2",
+              "testing/e2e-persist-1776895515148-cimbd4",
+              "testing/e2e-persist-1776909934278-ikpdcq",
+              "testing/e2e-persist-1776929952369-cv5eg9",
+              "testing/e2e-persist-1776975921595-pnp4ml",
+              {
+                "page": "testing/e2e-icon-change-1776975953737-zgh1yo",
+                "icon": "star"
+              },
+              "testing/e2e-collision-1776976007387-89gaf0",
+              "testing/e2e-collision-1776976420732-pzqlc9",
+              "testing/e2e-group-field-1776976434962-6kl57c",
+              {
+                "page": "testing/git-modify-none-1776981814152-srdbe2",
+                "icon": "book"
+              },
+              "testing/e2e-persist-1776982305010-cjhq60",
+              "testing/git-modify-add-target-1776983847825-b815it",
+              "testing/rename-delete-old-1776985277858-uikss9",
+              "testing/page-target-1776985404575-jo7yid"
+            ],
+            "hidden": true
+          }
+        ]
+      },
+      {
         "tab": "PrimeRL Deubgging",
         "groups": [
           {
@@ -24,6 +555,74 @@
             "public": true,
             "pages": [
               "prime-rl/sleep-part",
+              "prime-rl/batbat",
+              "prime-rl/be-good",
+              "prime-rl/e2e-persist-1776813999549-o5uj4f",
+              "prime-rl/sandwich",
+              "prime-rl/happy",
+              "prime-rl/e2e-persist-1776812669908-cqwtr9",
+              "prime-rl/padd",
+              "prime-rl/monster-part",
+              "prime-rl/sickest",
+              "prime-rl/e2e-persist-1776811815966-669nf6",
+              "prime-rl/sick",
+              "prime-rl/hint-me",
+              "prime-rl/poppy",
+              "prime-rl/my-mothers-man-is-him",
+              "prime-rl/doom",
+              "prime-rl/my-last-dance-please-work",
+              "prime-rl/26-index-wild",
+              "prime-rl/burger",
+              "prime-rl/bugs-are-botting",
+              "prime-rl/sicker",
+              "prime-rl/final-final-part",
+              "prime-rl/index-55-bro",
+              "prime-rl/PoppedOff-user",
+              "prime-rl/index1-5",
+              "prime-rl/food-we-need-food",
+              "prime-rl/no-hint",
+              "prime-rl/merge-part",
+              "prime-rl/index2",
+              "prime-rl/index2-5",
+              "prime-rl/more",
+              "prime-rl/mfdoom",
+              "prime-rl/e2e-persist-1776812196280-cxc1ri",
+              "prime-rl/more-food-plz",
+              "prime-rl/my-oncall",
+              "prime-rl/e2e-persist-1776812550374-0a6ufu",
+              "prime-rl/e2e-persist-1776811759734-bhxk7k",
+              "prime-rl/beast-part",
+              "prime-rl/begging",
+              "prime-rl/another-one-thankyou",
+              "prime-rl/bad-bug-bot",
+              "prime-rl/tripple-air-boy",
+              "prime-rl/e2e-persist-1776811367364-a5et91",
+              "prime-rl/mask-ed-base",
+              "prime-rl/index-26-wild",
+              "prime-rl/frustrated",
+              "prime-rl/sicket",
+              "essentials/e2e-persist-1776817990604-31ohnn",
+              "essentials/e2e-persist-1776881205207-vk5qpz",
+              "testing/e2e-persist-1776884369125-bgidz2",
+              "testing/e2e-persist-1776890127412-qvnio1",
+              "testing/e2e-persist-1776902575311-3csja1",
+              "testing/e2e-persist-1776926346432-abblvf",
+              "testing/e2e-persist-1776926697803-ahtcg3",
+              "testing/e2e-persist-1776930991384-x5804a",
+              "testing/page-delete-1776975904972",
+              {
+                "page": "testing/e2e-icon-change-1776976368126-i0r8si",
+                "icon": "star"
+              },
+              "testing/rename-delete-old-1776981799553-nhaf2p",
+              "testing/git-modify-editor-modify-1776983876775-t6qp7y",
+              "testing/remove-rename-old-1776983947017-cxtd39",
+              "testing/git-modify-add-target-1776985319770-zvvr8n",
+              "testing/git-modify-editor-modify-1776985348901-przvm4",
+              "testing/remove-modify-1776985433310-i67sql",
+              "testing/nochange-rename-old-1776985476721-ob7u6o",
+              "testing/rename-modify-old-1776990247274-0ftf0l",
+              "testing/nochange-rename-old-1776990457857-gq4j8u"
             ]
           }
         ]
