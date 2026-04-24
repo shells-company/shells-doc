@@ -441,7 +441,10 @@
               "testing/git-modify-rename-old-1776985334229-d78tdk",
               "testing/rename-old-1776990216789-b36twg",
               "testing/rename-rename-old-1776990233088-8u487r",
-              "testing/git-modify-none-1776990275754-t05msy"
+              {
+                "page": "testing/git-modify-none-1776990275754-t05msy",
+                "icon": "book"
+              }
             ]
           },
           {
