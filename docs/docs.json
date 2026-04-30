@@ -99,7 +99,8 @@
       {
         "tab": "Poems",
         "pages": [
-          "poems/fragments"
+          "poems/fragments",
+          "poems/fragments-two"
         ]
       }
     ],
