@@ -100,7 +100,8 @@
         "tab": "Poems",
         "pages": [
           "poems/fragments",
-          "poems/fragments-two"
+          "poems/fragments-two",
+          "poems/fragments-three"
         ]
       }
     ],
