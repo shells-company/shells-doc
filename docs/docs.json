@@ -15,15 +15,6 @@
     "weight": 400
   },
   "navigation": {
-    "groups": [
-      {
-        "group": "API documentation",
-        "public": true,
-        "pages": [
-          "poems/fragments"
-        ]
-      }
-    ],
     "tabs": [
       {
         "tab": "Guides",
@@ -103,6 +94,12 @@
               "prime-rl/index2"
             ]
           }
+        ]
+      },
+      {
+        "tab": "Poems",
+        "pages": [
+          "poems/fragments"
         ]
       }
     ],
