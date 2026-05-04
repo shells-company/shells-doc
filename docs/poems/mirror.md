@@ -1,33 +1,9 @@
----
-title: "Mirror"
-description: "The man in the mirror is waving at me."
-sidebarTitle: "Mirror"
----
+# Mirror
 
 The man in the mirror is waving at me. He's coming clearer.\
 Cleaning glasses as a metaphor for reflecting more.\
 I'm hanging up my clothes.\
 Putting them on a rack that I can see everything that makes me me.
-
-<AccordionGroup>
-  <Accordion title="Here's an accordian">
-    <Card title="this is something cool in here." icon="sparkles">
-    </Card>
-  </Accordion>
-
-  <Accordion>
-  </Accordion>
-</AccordionGroup>
-
-<AccordionGroup>
-  <Accordion title="Here's an accordian">
-    <Card title="this is something cool in here." icon="sparkles">
-    </Card>
-  </Accordion>
-
-  <Accordion>
-  </Accordion>
-</AccordionGroup>
 
 > I should use these mirrors.
 
