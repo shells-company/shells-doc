@@ -5,7 +5,7 @@ Cleaning glasses as a metaphor for reflecting more.\
 I'm hanging up my clothes.\
 Putting them on a rack that I can see everything that makes me me.
 
-> I should use these mirrors.
+> I should use these mirrors..
 
 I can sit down on the bus.\
 I don't always have to be the one suffering the most.\
