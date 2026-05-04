@@ -1,7 +1,8 @@
----
-title: "In Two Pieces"
-description: "When the world explodes."
----
+# In Two Pieces"
+
+<Card title="this is something cool in here." icon="sparkles">
+  Hello
+</Card>
 
 It feels like my world is exploding.
 
