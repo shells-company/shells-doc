@@ -1,3 +1,7 @@
+---
+title: "mirror"
+---
+
 # Mirror
 
 The man in the mirror is waving at me. He's coming clearer.\
@@ -17,7 +21,7 @@ They just want to get back home to their Queen.\
 Just like me.\
 They long to be...
 
-I'm brushing my hair more.
+I'm brushing my hair more, cleaning myself up
 
 I like how I look.\
 I'm older now.\
