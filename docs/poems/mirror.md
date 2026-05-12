@@ -21,6 +21,20 @@ They just want to get back home to their Queen.\
 Just like me.\
 They long to be...
 
+The bee doesn't question the hive.\
+It knows its wings, its weight, its way.\
+It carries what it finds and flies it home.\
+No second-guessing. No delay.\
+I want to move like that.\
+Purposeful. Buzzing low.\
+Knowing the sweetness I've already gathered\
+is enough to make it back.\
+The Queen isn't waiting to judge me.\
+She's waiting because she needs me.\
+And maybe I need that too—\
+a hive to return to.\
+A place that hums when I walk in.
+
 I'm brushing my hair more, cleaning myself up
 
 I like how I look.\
