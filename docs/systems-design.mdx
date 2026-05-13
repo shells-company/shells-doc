@@ -1,0 +1,51 @@
+---
+title: "Systems Design"
+---
+
+- When customer pushes a commit we will do some operation
+
+GH → event → clone → S3
+
+→ SQS
+
+SQS worker picks it up
+
+→ Worker pulls from S3.
+
+Validation step
+
+- Validate docs.json
+- Validate links exist
+- Validate md syntax errors
+- Validate mdx
+
+Rendering
+
+- HTML tags
+- "What kinds of tags"
+
+Tag resolution CodeBlocks / Accordians / Etc
+
+Compile all into S3
+
+Really want to see how his product skills are
+
+> what are the tradeoffs between 
+
+> How would we send metrics / updates to our csutomers
+
+We can make an elastic log sink and then create a metrics service that reads from the structured logs in 
+
+> Customers would want to view the status by looking at Github octo checks ✅️
+
+- 
+
+> if a page has invalid mdx should we revert the full update?
+
+- I would give it an option for the user
+  > What is a good default?
+  If we detect validation errors don't publish that. 
+
+---
+
+Are we going to clone on the GH webhook call?
