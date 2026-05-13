@@ -138,7 +138,8 @@
           {
             "group": "Benji",
             "pages": [
-              "systems-design"
+              "systems-design",
+              "quickstart"
             ]
           }
         ]
