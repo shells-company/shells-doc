@@ -1,0 +1,34 @@
+---
+title: "Single Page Editing"
+---
+
+## Context
+
+In order for Mintlify to scale to power knowledge infrastructure as a whole, customers have been requesting for RBAC on specific pages.
+
+## New data models
+
+## RBAC Roles
+
+- Read only
+- Invisible
+- Suggestion only (out of scope for now)
+
+We are going to need a new repository for this.
+
+```text
+{
+	
+}
+```
+
+## Open Questions
+
+- **How do we handle inheritance?** If a parent group has a role, do child pages inherit it automatically, or does each page need explicit assignment?
+- **What happens when a user with read-only access tries to edit?** Do we silently block edits, show an error, or hide the edit UI entirely?
+- **How are roles assigned — per user or per team/group?** Do we support assigning roles to org-level groups, or only to individual users?
+- **How do we handle public vs. authenticated pages?** Does RBAC apply only to authenticated users, or can it restrict anonymous access too?
+- **What's the migration path for existing customers?** Do all existing pages default to unrestricted access, and how do we communicate this change?
+- **How do we surface role information in the editor?** Should page-level permissions be visible in the sidebar, a settings panel, or elsewhere?
+- **Do we need audit logging?** Should we track who changed permissions on a page and when?
+- **What's the scope of "Suggestion only"?** When we bring it in scope, how does it interact with the existing PR/draft workflow?
