@@ -114,7 +114,7 @@
         "tab": "Larger Poems",
         "pages": [
           {
-            "group": "Fragments",
+            "group": "frag",
             "pages": [
               "poems/fragments",
               "poems/fragments-two",
