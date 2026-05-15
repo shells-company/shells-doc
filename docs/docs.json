@@ -113,11 +113,16 @@
       {
         "tab": "Larger Poems",
         "pages": [
-          "poems/fragments",
-          "poems/fragments-two",
-          "poems/fragments-three",
-          "poems/fragments-four",
-          "poems/fragments-last",
+          {
+            "group": "Fragments",
+            "pages": [
+              "poems/fragments",
+              "poems/fragments-two",
+              "poems/fragments-three",
+              "poems/fragments-four",
+              "poems/fragments-last"
+            ]
+          },
           "poems/mirror",
           "poems/untitled-page",
           "poems/spring-cleaning",
