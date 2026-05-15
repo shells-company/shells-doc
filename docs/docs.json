@@ -113,7 +113,6 @@
       {
         "tab": "Poems",
         "pages": [
-          "poems/index",
           "poems/fragments",
           "poems/fragments-two",
           "poems/fragments-three",
