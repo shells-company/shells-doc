@@ -15,5 +15,5 @@ A star is each time this has been invoked.
 Keep the start counts below
 
 1. Stars ⭐
-2. Stars
+2. Stars ⭐
 3. Stars
