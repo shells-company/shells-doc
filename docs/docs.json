@@ -60,6 +60,7 @@
             "pages": [
               "essentials/writing",
               "essentials/code",
+              "essentials/code",
               "essentials/images",
               "essentials/reusable-snippets"
             ]
@@ -146,6 +147,12 @@
             ]
           },
           "todos/single-page-editing"
+        ]
+      },
+      {
+        "tab": "Markdown",
+        "pages": [
+          "pause"
         ]
       }
     ]
