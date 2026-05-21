@@ -1,5 +1,58 @@
 ---
-title: "Hault"
+title: "Stop"
+description: "Understanding how to pause, stop, and gracefully halt processes in your system."
 ---
 
-How are you?
+## Overview
+
+A **halt** is a deliberate stop of a process, service, or system. Unlike a crash or failure, a halt is a controlled action — giving your system time to clean up, flush buffers, and exit safely.
+
+## When to Use a Halt
+
+- **Maintenance windows** — Halt services before applying updates or migrations
+- **Graceful shutdowns** — Allow in-flight requests to complete before stopping
+- **Error recovery** — Halt a process when it reaches an unrecoverable state
+- **Resource management** — Free up memory or CPU by stopping idle processes
+
+## Types of Halts
+
+<CardGroup cols={2}>
+  <Card title="Graceful Halt" icon="hand">
+    Waits for ongoing tasks to finish before stopping. Preferred for production systems.
+  </Card>
+
+  <Card title="Immediate Halt" icon="stop">
+    Stops instantly. Use only when a graceful halt isn't possible (e.g., deadlocks).
+  </Card>
+</CardGroup>
+
+## Example
+
+```bash
+# Send a graceful shutdown signal
+kill -SIGTERM <pid>
+
+# Force stop if unresponsive
+kill -SIGKILL <pid>
+```
+
+## Best Practices
+
+<Steps>
+  <Step title="Drain connections">
+    Stop accepting new requests while allowing active ones to complete.
+  </Step>
+  <Step title="Flush state">
+    Write any in-memory state to disk or a database before halting.
+  </Step>
+  <Step title="Log the halt">
+    Always record why and when the halt occurred for debugging and auditing.
+  </Step>
+  <Step title="Notify dependents">
+    Alert upstream or downstream services that this service is going offline.
+  </Step>
+</Steps>
+
+<Note>
+  Always prefer a graceful halt over a forced one. Forced halts can leave data in an inconsistent state or cause downstream failures.
+</Note>

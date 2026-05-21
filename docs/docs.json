@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "luma",
   "name": "My CLI Tool",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FFB700",
+    "light": "#FFB700",
+    "dark": "#4B0082"
   },
   "favicon": "/favicon.svg",
   "fonts": {
