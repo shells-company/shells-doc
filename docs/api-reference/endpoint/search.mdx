@@ -1,0 +1,80 @@
+---
+title: 'Search'
+description: 'Run grep-like searches against an indexed dataset'
+---
+
+`POST /api/search` runs a search command against the files indexed in a dataset and returns the matching lines as plain text.
+
+## Request body
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `dataset` | `string` (UUID) | Yes | The UUID of the dataset to search. |
+| `flags` | `string` | Yes | Flags and pattern passed to the search command (for example, `-r -n error`). |
+| `folder_filter` | `string[]` | Yes | Folders to scope the search to. Pass `[]` to search the whole dataset, or provide tag folders like `["___private"]`. |
+| `command` | `string` | No | The binary used to run the search. Defaults to `grep`. |
+
+## Choosing a search command
+
+By default, search runs `grep` against the dataset. Set `command` to use a different binary that accepts the same `flags + paths` invocation style. This is useful when you want faster or more expressive search tools.
+
+<Note>
+  The `command` must be available on the server that runs the search service. Flags you pass in `flags` are forwarded to that binary as-is, so make sure they are valid for the command you pick.
+</Note>
+
+Common choices:
+
+- `grep` — the default.
+- `rg` — [ripgrep](https://github.com/BurntSushi/ripgrep), faster recursive search with sensible defaults.
+- `ggrep` — GNU grep on systems where the default `grep` is BSD.
+
+## Examples
+
+### Default grep search
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r -n error",
+    "folder_filter": []
+  }'
+```
+
+### Search with ripgrep
+
+Pass `"command": "rg"` to run [ripgrep](https://github.com/BurntSushi/ripgrep) instead of `grep`. Use ripgrep-compatible flags in `flags`.
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-n --no-heading error",
+    "folder_filter": [],
+    "command": "rg"
+  }'
+```
+
+### Scoped search with a tag folder
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r -n password",
+    "folder_filter": ["___private"],
+    "command": "rg"
+  }'
+```
+
+## Response
+
+The response is `text/plain` containing the raw output of the chosen command. Paths inside tag folders are normalized so they start at the dataset UUID.
+
+```text
+550e8400-e29b-41d4-a716-446655440000/app.js:12:console.error("error occurred");
+550e8400-e29b-41d4-a716-446655440000/___private/utils.js:4:handleError(err) {...}
+```
