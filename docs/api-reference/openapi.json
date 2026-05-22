@@ -1,72 +1,29 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "title": "GrepDB API",
+    "description": "A database for grepping — index files and run grep-like searches over them.",
     "license": {
       "name": "MIT"
     },
-    "version": "1.0.0"
+    "version": "0.1.0"
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
-    }
-  ],
-  "security": [
-    {
-      "bearerAuth": []
+      "url": "http://localhost:8080"
     }
   ],
   "paths": {
-    "/plants": {
-      "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/index": {
       "post": {
-        "description": "Creates a new plant in the store",
+        "tags": ["Index"],
+        "summary": "Index a file into a dataset",
+        "operationId": "index",
         "requestBody": {
-          "description": "Plant to add to the store",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
+                "$ref": "#/components/schemas/GrepIndexPayload"
               }
             }
           },
@@ -74,79 +31,84 @@
         },
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "File indexed successfully",
             "content": {
-              "application/json": {
+              "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "type": "string"
                 }
               }
             }
           },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+          "500": {
+            "description": "Internal server error"
           }
         }
       }
     },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
+    "/api/search": {
+      "post": {
+        "tags": ["Search"],
+        "summary": "Search indexed files",
+        "description": "Run a search against indexed files in a dataset. By default the search uses `grep`, but you can override the executable with the optional `command` field to use any compatible search tool available on the server (for example, `rg` for ripgrep). The `flags` field accepts an arbitrary search string that is forwarded to the chosen command.",
+        "operationId": "search",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrepSearchPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Search results returned successfully",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/{dataset}/tags": {
+      "get": {
+        "tags": ["Search"],
+        "summary": "List tags for a dataset",
+        "operationId": "get_all_tags",
         "parameters": [
           {
-            "name": "id",
+            "name": "dataset",
             "in": "path",
-            "description": "ID of plant to delete",
+            "description": "The UUID of the dataset",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
-          },
-          "400": {
-            "description": "unexpected error",
+          "200": {
+            "description": "Tags returned successfully",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "$ref": "#/components/schemas/TagsResponse"
                 }
               }
             }
-          }
-        }
-      }
-    }
-  },
-  "webhooks": {
-    "/plant/webhook": {
-      "post": {
-        "description": "Information about a new plant added to the store",
-        "requestBody": {
-          "description": "Plant added to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Return a 200 status to indicate that the data was received successfully"
+          },
+          "500": {
+            "description": "Internal server error"
           }
         }
       }
@@ -154,64 +116,81 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
-        "required": [
-          "name"
-        ],
+      "GrepIndexPayload": {
         "type": "object",
+        "required": ["dataset", "filename", "file_payload", "tags"],
         "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
+          "dataset": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The UUID of the dataset to index into"
           },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
+          "file_payload": {
+            "type": "string",
+            "description": "The content of the file"
+          },
+          "filename": {
+            "type": "string",
+            "description": "The filename to store"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags for nested storage (for example, [\"private\", \"user_auth\"])"
           }
         }
       },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          }
-        ]
-      },
-      "Error": {
-        "required": [
-          "error",
-          "message"
-        ],
+      "GrepSearchPayload": {
         "type": "object",
+        "required": ["dataset", "flags", "folder_filter"],
         "properties": {
-          "error": {
-            "type": "integer",
-            "format": "int32"
+          "dataset": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The UUID of the dataset to search"
           },
-          "message": {
-            "type": "string"
+          "flags": {
+            "type": "string",
+            "description": "An arbitrary search string passed to the search command. With the default `grep` command this is the flag list and pattern (for example, \"-r -n pattern\")."
+          },
+          "folder_filter": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional tag folders to restrict the search to (for example, [\"___private\", \"___user_auth\"]). Pass an empty array to search the whole dataset."
+          },
+          "command": {
+            "type": "string",
+            "description": "Optional. The search executable to run instead of the default `grep`. Use this to support any compatible search tool available on the server (for example, `rg`)."
           }
         }
-      }
-    },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer"
+      },
+      "TagsResponse": {
+        "type": "object",
+        "required": ["tags"],
+        "properties": {
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of available tags for the dataset"
+          }
+        }
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "Search",
+      "description": "Search operations on indexed data"
+    },
+    {
+      "name": "Index",
+      "description": "Index new files into datasets"
+    }
+  ]
 }

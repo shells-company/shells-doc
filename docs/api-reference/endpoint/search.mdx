@@ -1,0 +1,57 @@
+---
+title: 'Search a dataset'
+openapi: 'POST /api/search'
+---
+
+Run a search across the files you've indexed into a dataset. By default the
+endpoint shells out to `grep`, but you can override the executable with the
+optional `command` field to use any compatible search tool available on the
+server.
+
+## Choosing a search command
+
+The `command` field accepts the name of any search executable installed on the
+server. When omitted, the endpoint uses `grep`.
+
+```json
+{
+  "dataset": "550e8400-e29b-41d4-a716-446655440000",
+  "flags": "-r -n error",
+  "folder_filter": []
+}
+```
+
+To use a different tool such as ripgrep, set `command` and pass the matching
+flag string:
+
+```json
+{
+  "dataset": "550e8400-e29b-41d4-a716-446655440000",
+  "command": "rg",
+  "flags": "-n error",
+  "folder_filter": []
+}
+```
+
+## Arbitrary search strings
+
+The `flags` field is forwarded to the chosen command as-is, so you can compose
+any flag combination the tool supports — case-insensitive matches, context
+lines, inverse matches, counts, and so on.
+
+```json
+{ "flags": "-i -n -A 3 -r exception", "folder_filter": [] }
+```
+
+## Filtering by tag
+
+Restrict a search to specific tag folders by passing them in `folder_filter`.
+Pass an empty array to search the whole dataset.
+
+```json
+{
+  "dataset": "550e8400-e29b-41d4-a716-446655440000",
+  "flags": "-r error",
+  "folder_filter": ["___private", "___user_auth"]
+}
+```

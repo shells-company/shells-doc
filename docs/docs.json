@@ -87,13 +87,12 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Endpoints",
             "public": true,
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/index-file",
+              "api-reference/endpoint/search",
+              "api-reference/endpoint/tags"
             ]
           }
         ]
