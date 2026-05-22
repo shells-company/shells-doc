@@ -1,0 +1,21 @@
+---
+title: "List dataset tags"
+description: "Return every tag folder that has been created for a ShellDB dataset."
+openapi: "/api-reference/shelldb-openapi.json GET /api/{dataset}/tags"
+---
+
+This endpoint lists every tag that has been used to index a file in the given dataset. Use the returned values to populate `folder_filter` on the [search endpoint](/api-reference/shelldb/search).
+
+The `___` prefix that ShellDB uses internally on tag folders is stripped from the response.
+
+## Example
+
+```sh
+curl http://localhost:8080/api/550e8400-e29b-41d4-a716-446655440000/tags
+```
+
+```json
+{
+  "tags": ["private", "user_auth"]
+}
+```

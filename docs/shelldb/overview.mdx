@@ -1,0 +1,49 @@
+---
+title: "ShellDB overview"
+description: "A file database that runs shell commands like grep across indexed datasets, with tag-based filtering."
+---
+
+ShellDB is a file database that lets you run shell commands across indexed files. You upload files into a dataset, then query them with commands like `grep` to return matching lines, files, or contexts.
+
+## When to use ShellDB
+
+Use ShellDB when you want to:
+
+- Search across a corpus of files with the full power of `grep` flags (regex, context lines, case-insensitive, counts).
+- Scope searches to subsets of files using tags.
+- Run other shell commands against indexed content without managing your own file storage.
+
+## How it works
+
+- Files live under `${dataDir}/{dataset_id}/path/to/file`.
+- Files indexed with tags also live under `${dataDir}/{dataset_id}/___{tag}/path/to/file`, one copy per tag.
+- Searches run the requested command (default: `grep`) against the dataset directory and any tag folders you pass in `folder_filter`.
+
+## Supported commands
+
+| Command | Status |
+| ------- | ------ |
+| `grep`  | Available |
+| `ls`    | Coming soon |
+| `awk`   | Coming soon |
+
+You can also pass any other binary available on the server through the optional `command` field on the search endpoint.
+
+## Running ShellDB
+
+```sh
+docker run -p 8080:8080 cdxker/shelldb
+```
+
+The server listens on port `8080` and reads its data directory from `config.yaml`.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/shelldb/quickstart">
+    Index your first file and run a search.
+  </Card>
+  <Card title="Search API" icon="magnifying-glass" href="/api-reference/shelldb/search">
+    Reference for the `/api/search` endpoint.
+  </Card>
+</CardGroup>

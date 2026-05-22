@@ -1,0 +1,100 @@
+---
+title: "ShellDB quickstart"
+description: "Index files into a ShellDB dataset and run grep searches with tag filters in under five minutes."
+---
+
+This guide walks you through indexing files into a dataset and running a search.
+
+## Prerequisites
+
+- ShellDB running locally on `http://localhost:8080` (see [Overview](/shelldb/overview)).
+- A dataset UUID. If the UUID does not exist, ShellDB creates it on the first index call.
+
+## 1. Index a file
+
+Send the file contents to `/api/index`. Tags create per-tag copies of the file under `___{tag}` folders so you can filter searches later.
+
+```sh
+curl -X POST http://localhost:8080/api/index \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "filename": "utils.js",
+    "file_payload": "function handleError(err) { console.error(err); }",
+    "tags": ["private"]
+  }'
+```
+
+Index multiple files by calling `/api/index` once per file.
+
+## 2. Search the dataset
+
+Run a `grep` across every file in the dataset by leaving `folder_filter` empty:
+
+```sh
+curl -X POST http://localhost:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r -n error",
+    "folder_filter": []
+  }'
+```
+
+The response is plain text with one match per line, prefixed by the file path.
+
+## 3. Filter by tag
+
+Pass tag folders (prefixed with `___`) in `folder_filter` to restrict the search to files tagged with one of those tags:
+
+```sh
+curl -X POST http://localhost:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r handleError",
+    "folder_filter": ["___private"]
+  }'
+```
+
+List the tags available for a dataset with [`GET /api/{dataset}/tags`](/api-reference/shelldb/tags).
+
+## 4. Run a different command
+
+The optional `command` field lets you run any binary on the server instead of `grep`. The `flags` string is passed as the command's arguments, and the dataset path (plus any folder filters) is appended last.
+
+```sh
+curl -X POST http://localhost:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-la",
+    "folder_filter": [],
+    "command": "ls"
+  }'
+```
+
+When `command` is omitted, ShellDB defaults to `grep`.
+
+<Warning>
+  Any binary you name in `command` runs on the ShellDB host with the server's permissions. Only expose the search endpoint to trusted callers.
+</Warning>
+
+## Common grep patterns
+
+```sh
+# Case-insensitive recursive search
+{ "flags": "-i -r searchterm", "folder_filter": [] }
+
+# Show line numbers
+{ "flags": "-n -r function", "folder_filter": [] }
+
+# Count matches per file
+{ "flags": "-c -r TODO", "folder_filter": [] }
+
+# Show 2 lines before and after each match
+{ "flags": "-C 2 -r handleError", "folder_filter": [] }
+
+# Restrict to tagged folders
+{ "flags": "-r error", "folder_filter": ["___private", "___user_auth"] }
+```

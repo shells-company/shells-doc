@@ -1,0 +1,22 @@
+---
+title: "Index a file"
+description: "Store a file in a ShellDB dataset, optionally fanning it out into tag folders for later filtering."
+openapi: "/api-reference/shelldb-openapi.json POST /api/index"
+---
+
+Use this endpoint to add a file to a dataset. If the dataset does not exist yet, ShellDB creates it.
+
+When you pass one or more `tags`, ShellDB stores a copy of the file under each `___{tag}` folder inside the dataset. An empty `tags` array stores the file in the dataset root.
+
+## Example
+
+```sh
+curl -X POST http://localhost:8080/api/index \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "filename": "utils.js",
+    "file_payload": "function handleError(err) { console.error(err); }",
+    "tags": ["private", "user_auth"]
+  }'
+```

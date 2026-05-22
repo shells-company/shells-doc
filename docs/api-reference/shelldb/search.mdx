@@ -1,0 +1,29 @@
+---
+title: "Search a dataset"
+description: "Run grep or another shell command against an indexed ShellDB dataset, optionally scoped to tag folders."
+openapi: "/api-reference/shelldb-openapi.json POST /api/search"
+---
+
+The search endpoint executes a shell command against the files in a dataset and returns the command's `stdout` as plain text.
+
+By default, ShellDB runs `grep`. Set the optional `command` field to run any other binary available on the server.
+
+## Request fields
+
+- `dataset` — UUID of the dataset to search.
+- `flags` — Whitespace-separated arguments passed to the command (for example, `"-r -n pattern"`). Do not include the command name itself.
+- `folder_filter` — List of tag folders (such as `"___private"`) to include alongside the dataset root. Pass an empty array to search the whole dataset.
+- `command` — Optional. The binary to invoke. Defaults to `grep`.
+
+## Example
+
+```sh
+curl -X POST http://localhost:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-i -n -r error",
+    "folder_filter": ["___private"],
+    "command": "grep"
+  }'
+```

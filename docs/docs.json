@@ -150,6 +150,28 @@
         ]
       },
       {
+        "tab": "ShellDB",
+        "groups": [
+          {
+            "group": "Get started",
+            "public": true,
+            "pages": [
+              "shelldb/overview",
+              "shelldb/quickstart"
+            ]
+          },
+          {
+            "group": "API reference",
+            "public": true,
+            "pages": [
+              "api-reference/shelldb/search",
+              "api-reference/shelldb/index-file",
+              "api-reference/shelldb/tags"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Markdown",
         "pages": [
           "pause",
