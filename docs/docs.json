@@ -114,6 +114,7 @@
       {
         "tab": "Larger Poems",
         "pages": [
+          "poems/overview.md",
           {
             "group": "frag",
             "pages": [
