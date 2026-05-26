@@ -29,155 +29,192 @@
         }
       ]
     },
-    "tabs": [
+    "languages": [
       {
-        "tab": "GuideS",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Getting started",
-            "public": true,
-            "pages": [
-              "index",
-              "page",
-              "ai-tools/deprecated-tool-2",
-              "ai-tools/3",
-              "ai-tools/4",
-              "essentials/new-page"
+            "tab": "GuideS",
+            "groups": [
+              {
+                "group": "Getting started",
+                "public": true,
+                "pages": [
+                  "index",
+                  "page",
+                  "ai-tools/deprecated-tool-2",
+                  "ai-tools/3",
+                  "ai-tools/4",
+                  "essentials/new-page"
+                ]
+              },
+              {
+                "group": "Customization",
+                "hidden": true,
+                "public": true,
+                "pages": [
+                  "essentials/starter",
+                  "essentials/site-map"
+                ]
+              },
+              {
+                "group": "Writing content",
+                "public": true,
+                "pages": [
+                  "essentials/writing",
+                  "essentials/code",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI tools",
+                "public": true,
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/cc-retired",
+                  "ai-tools/windsurf"
+                ]
+              }
             ]
           },
           {
-            "group": "Customization",
-            "hidden": true,
-            "public": true,
-            "pages": [
-              "essentials/starter",
-              "essentials/site-map"
+            "tab": "API reference",
+            "groups": [
+              {
+                "group": "API documentation",
+                "public": true,
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoint examples",
+                "public": true,
+                "pages": [
+                  "api-reference/endpoint/get",
+                  "api-reference/endpoint/create",
+                  "api-reference/endpoint/delete",
+                  "api-reference/endpoint/webhook"
+                ]
+              }
             ]
           },
           {
-            "group": "Writing content",
-            "public": true,
-            "pages": [
-              "essentials/writing",
-              "essentials/code",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+            "tab": "PrimeRL Deubgging",
+            "groups": [
+              {
+                "group": "PrimeIndex",
+                "public": true,
+                "pages": [
+                  "prime-rl/index",
+                  "prime-rl/index2"
+                ]
+              }
             ]
           },
           {
-            "group": "AI tools",
-            "public": true,
+            "tab": "Larger Poems",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/cc-retired",
-              "ai-tools/windsurf"
+              "poems/overview.mdx",
+              {
+                "group": "frag",
+                "pages": [
+                  "poems/fragments",
+                  "poems/fragments-two",
+                  "poems/fragments-three",
+                  "poems/fragments-four",
+                  "poems/fragments-last"
+                ]
+              },
+              "poems/mirror",
+              "poems/untitled-page",
+              "poems/spring-cleaning",
+              "poems/summer-drift",
+              "poems/daily-todos",
+              "poems/sarah",
+              "poems/look-up"
+            ]
+          },
+          {
+            "tab": "TODOS",
+            "pages": [
+              {
+                "group": "Benji",
+                "pages": [
+                  "systems-design"
+                ]
+              },
+              "todos/single-page-editing",
+              {
+                "group": "Daily",
+                "pages": [
+                  "todos/may-11th",
+                  "todos/may-12th",
+                  "todos/may-13th",
+                  "todos/may-26th"
+                ]
+              },
+              "todos/weekly-ships-may-11th"
+            ]
+          },
+          {
+            "tab": "Markdown",
+            "groups": [
+              {
+                "group": "Other Pages",
+                "pages": [
+                  "somehtin"
+                ]
+              },
+              {
+                "group": "Pause & Stop",
+                "pages": [
+                  "pause",
+                  "paused",
+                  "hault"
+                ]
+              },
+              {
+                "group": "Drafts",
+                "pages": [
+                  "asdf",
+                  "some-page"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
+        "language": "ar",
+        "tabs": [
           {
-            "group": "API documentation",
-            "public": true,
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "public": true,
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "PrimeRL Deubgging",
-        "groups": [
-          {
-            "group": "PrimeIndex",
-            "public": true,
-            "pages": [
-              "prime-rl/index",
-              "prime-rl/index2"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Larger Poems",
-        "pages": [
-          "poems/overview.mdx",
-          {
-            "group": "frag",
-            "pages": [
-              "poems/fragments",
-              "poems/fragments-two",
-              "poems/fragments-three",
-              "poems/fragments-four",
-              "poems/fragments-last"
-            ]
-          },
-          "poems/mirror",
-          "poems/untitled-page",
-          "poems/spring-cleaning",
-          "poems/summer-drift",
-          "poems/daily-todos",
-          "poems/sarah",
-          "poems/look-up"
-        ]
-      },
-      {
-        "tab": "TODOS",
-        "pages": [
-          {
-            "group": "Benji",
-            "pages": [
-              "systems-design"
-            ]
-          },
-          "todos/single-page-editing",
-          {
-            "group": "Daily",
-            "pages": [
-              "todos/may-11th",
-              "todos/may-12th",
-              "todos/may-13th",
-              "todos/may-26th"
-            ]
-          },
-          "todos/weekly-ships-may-11th"
-        ]
-      },
-      {
-        "tab": "Markdown",
-        "groups": [
-          {
-            "group": "Other Pages",
-            "pages": [
-              "somehtin"
-            ]
-          },
-          {
-            "group": "Pause & Stop",
-            "pages": [
-              "pause",
-              "paused",
-              "hault"
-            ]
-          },
-          {
-            "group": "Drafts",
-            "pages": [
-              "asdf",
-              "some-page"
+            "tab": "Markdown",
+            "groups": [
+              {
+                "group": "صفحات أخرى",
+                "pages": [
+                  "ar/somehtin"
+                ]
+              },
+              {
+                "group": "الإيقاف المؤقت والإيقاف",
+                "pages": [
+                  "ar/pause",
+                  "ar/paused",
+                  "ar/hault"
+                ]
+              },
+              {
+                "group": "المسودات",
+                "pages": [
+                  "ar/asdf",
+                  "ar/some-page"
+                ]
+              }
             ]
           }
         ]
