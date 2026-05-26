@@ -158,13 +158,28 @@
       },
       {
         "tab": "Markdown",
-        "pages": [
-          "pause",
-          "somehtin",
-          "paused",
-          "hault",
-          "asdf",
-          "some-page"
+        "groups": [
+          {
+            "group": "Other Pages",
+            "pages": [
+              "somehtin"
+            ]
+          },
+          {
+            "group": "Pause & Stop",
+            "pages": [
+              "pause",
+              "paused",
+              "hault"
+            ]
+          },
+          {
+            "group": "Drafts",
+            "pages": [
+              "asdf",
+              "some-page"
+            ]
+          }
         ]
       }
     ]
