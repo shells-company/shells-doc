@@ -137,17 +137,23 @@
       {
         "tab": "TODOS",
         "pages": [
-          "todos/weekly-ships-may-11th",
-          "todos/may-11th",
-          "todos/may-12th",
-          "todos/may-13th",
           {
             "group": "Benji",
             "pages": [
               "systems-design"
             ]
           },
-          "todos/single-page-editing"
+          "todos/single-page-editing",
+          {
+            "group": "Daily",
+            "pages": [
+              "todos/may-11th",
+              "todos/may-12th",
+              "todos/may-13th",
+              "todos/may-26th"
+            ]
+          },
+          "todos/weekly-ships-may-11th"
         ]
       },
       {
