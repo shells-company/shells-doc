@@ -193,7 +193,7 @@
         "tabs": [
           {
             "tab": "Markdown",
-            "groups": [
+            "pages": [
               {
                 "group": "صفحات أخرى",
                 "pages": [
@@ -214,7 +214,12 @@
                   "ar/asdf",
                   "ar/some-page"
                 ]
-              }
+              },
+              "ar/poems/overview.mdx",
+              "ar/poems/fragments.mdx",
+              "ar/poems/fragments-two.mdx",
+              "ar/poems/fragments-three.mdx",
+              "ar/poems/fragments-four.mdx"
             ]
           }
         ]
