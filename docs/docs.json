@@ -68,7 +68,8 @@
                   "essentials/writing",
                   "essentials/code",
                   "essentials/images",
-                  "essentials/reusable-snippets"
+                  "essentials/reusable-snippets",
+                  "essentials/sadf"
                 ]
               },
               {
@@ -77,7 +78,8 @@
                 "pages": [
                   "ai-tools/cursor",
                   "ai-tools/cc-retired",
-                  "ai-tools/windsurf"
+                  "ai-tools/windsurf",
+                  "ai-tools/ai-tools.mdx"
                 ]
               }
             ]
