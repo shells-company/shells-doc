@@ -218,10 +218,15 @@
                 ]
               },
               "ar/poems/overview.mdx",
-              "ar/poems/fragments.mdx",
-              "ar/poems/fragments-two.mdx",
-              "ar/poems/fragments-three.mdx",
-              "ar/poems/fragments-four.mdx"
+              {
+                "group": "Arabic Fragments",
+                "pages": [
+                  "ar/poems/fragments.mdx",
+                  "ar/poems/fragments-two.mdx",
+                  "ar/poems/fragments-three.mdx",
+                  "ar/poems/fragments-four.mdx"
+                ]
+              }
             ]
           }
         ]
