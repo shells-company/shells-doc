@@ -36,7 +36,7 @@
         "tabs": [
           {
             "tab": "GuideS",
-            "groups": [
+            "pages": [
               {
                 "group": "Getting started",
                 "public": true,
@@ -81,9 +81,12 @@
                   "ai-tools/cc-retired",
                   "ai-tools/windsurf",
                   "ai-tools/ai-tools.mdx",
-                  "lkj"
+                  "lkj",
+                  "ai-tools/asdf",
+                  "ai-tools/burasdf"
                 ]
-              }
+              },
+              "lkjlkj"
             ]
           },
           {
@@ -110,7 +113,7 @@
           },
           {
             "tab": "PrimeRL Deubgging",
-            "groups": [
+            "pages": [
               {
                 "group": "PrimeIndex",
                 "public": true,
@@ -118,7 +121,8 @@
                   "prime-rl/index",
                   "prime-rl/index2"
                 ]
-              }
+              },
+              "asdf-1"
             ]
           },
           {
