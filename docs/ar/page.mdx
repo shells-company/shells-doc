@@ -1,0 +1,47 @@
+---
+title: "نعم ليس الآن"
+description: "معاينة التغييرات محليًا لتحديث المستندات الخاصة بك"
+---
+
+<Info>
+  **المتطلبات الأساسية**: Node.js 19\+ ومستودع مستندات يحتوي على ملف `docs.json`.
+</Info>
+
+<Steps>
+  <Step title="تثبيت Mintlify CLI">
+    ```bash
+    npm i -g mint
+    ```
+  </Step>
+  <Step title="المعاينة محليًا">
+    من دليل المستندات الخاص بك، شغّل:
+
+    ```bash
+    mint dev
+    ```
+
+    تتوفر المعاينة على `http://localhost:3000`.
+  </Step>
+</Steps>
+
+## الأوامر الشائعة
+
+```bash
+mint dev --port 3333   # Run on a custom port
+mint update            # Update the CLI
+mint broken-links      # Check for broken links
+```
+
+## استكشاف الأخطاء وإصلاحها
+
+<AccordionGroup>
+  <Accordion title='Error: Could not load the "sharp" module'>
+    أعد التثبيت على Node 19\+: `npm remove -g mint` ثم `npm i -g mint`.
+  </Accordion>
+
+  <Accordion title="Unknown error">
+    احذف `~/.mintlify` وشغّل `mint dev` مرة أخرى.
+  </Accordion>
+</AccordionGroup>
+
+مزامنة هذه الصفحة
