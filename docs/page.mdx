@@ -45,3 +45,13 @@ mint broken-links      # Check for broken links
 </AccordionGroup>
 
 sync this page
+
+<AccordionGroup>
+  <Accordion title='Error: Could not load the "sharp" module'>
+    Reinstall on Node 19\+: `npm remove -g mint` then `npm i -g mint`.
+  </Accordion>
+
+  <Accordion title="Unknown error">
+    Delete `~/.mintlify` and run `mint dev` again.
+  </Accordion>
+</AccordionGroup>
