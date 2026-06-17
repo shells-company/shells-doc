@@ -208,6 +208,12 @@
             "tab": "Markdown",
             "pages": [
               {
+                "group": "البدء",
+                "pages": [
+                  "ar/index"
+                ]
+              },
+              {
                 "group": "صفحات أخرى",
                 "pages": [
                   "ar/somehtin"
