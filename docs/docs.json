@@ -235,6 +235,12 @@
                   "ar/some-page"
                 ]
               },
+              {
+                "group": "وثائق API",
+                "pages": [
+                  "ar/api-reference/adding"
+                ]
+              },
               "ar/poems/overview.mdx",
               {
                 "group": "Arabic Fragments",
