@@ -59,8 +59,7 @@
                 "hidden": true,
                 "public": true,
                 "pages": [
-                  "essentials/starter",
-                  "essentials/site-map"
+                  "essentials/starter"
                 ]
               },
               {
@@ -69,6 +68,7 @@
                 "pages": [
                   "essentials/writing",
                   "essentials/code",
+                  "essentials/site-map",
                   "essentials/images",
                   "essentials/reusable-snippets",
                   "essentials/sadf",
