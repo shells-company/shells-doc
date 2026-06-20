@@ -63,6 +63,14 @@
                 ]
               },
               {
+                "group": "Navigation-one",
+                "hidden": true,
+                "public": true,
+                "pages": [
+                  "essentials/starter"
+                ]
+              },
+              {
                 "group": "Navigation-two",
                 "hidden": true,
                 "public": true,
