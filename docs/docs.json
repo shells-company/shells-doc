@@ -150,7 +150,7 @@
           {
             "tab": "Larger Poems",
             "pages": [
-              "poems/overview.mdx",
+              "poems/overview",
               {
                 "group": "frag",
                 "pages": [
@@ -204,8 +204,7 @@
                 "group": "Pause & Stop",
                 "pages": [
                   "pause",
-                  "paused",
-                  "hault"
+                  "paused"
                 ]
               },
               {
