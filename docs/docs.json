@@ -237,6 +237,12 @@
                 ]
               },
               {
+                "group": "صفحات أخرى",
+                "pages": [
+                  "ar/somehtin"
+                ]
+              },
+              {
                 "group": "الإيقاف المؤقت والإيقاف",
                 "pages": [
                   "ar/pause",
@@ -257,7 +263,7 @@
                   "ar/api-reference/adding"
                 ]
               },
-              "ar/poems/overview.mdx",
+              "ar/poems/overview",
               {
                 "group": "Arabic Fragments",
                 "pages": [
