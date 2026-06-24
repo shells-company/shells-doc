@@ -84,17 +84,17 @@
                 "pages": [
                   "essentials/writing",
                   "essentials/code",
-                  "essentials/site-map",
                   "essentials/images",
                   "essentials/reusable-snippets",
-                  "essentials/sadf",
-                  "essentials/some-page-here"
+                  "essentials/site-map",
+                  "essentials/sadf"
                 ]
               },
               {
                 "group": "AI tools",
                 "public": true,
                 "pages": [
+                  "essentials/some-page-here",
                   "ai-tools/cursor",
                   "ai-tools/cc-retired",
                   "ai-tools/windsurf",
@@ -107,7 +107,13 @@
               },
               "lkjlkj",
               "new-page-233",
-              "image-testing"
+              "image-testing",
+              {
+                "group": "some-group",
+                "pages": [
+                  "some-page-1"
+                ]
+              }
             ]
           },
           {
