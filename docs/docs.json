@@ -172,7 +172,15 @@
               "poems/untitled-page",
               "poems/summer-drift",
               "poems/spring-cleaning",
-              "haiku/look-up"
+              "haiku/look-up",
+              {
+                "group": "GPT",
+                "pages": [
+                  "poems/gpt/introduction",
+                  "poems/gpt/enter-prompt-below",
+                  "poems/gpt/weighing-craft-poetic-thought-with-wellbeing-protocols"
+                ]
+              }
             ]
           },
           {
@@ -191,7 +199,7 @@
                   "todos/may-11th",
                   "todos/may-12th",
                   "todos/may-13th",
-                  "todos/may-26th"
+                  "todos/may-26th-endend"
                 ]
               },
               "todos/weekly-ships-may-11th"
