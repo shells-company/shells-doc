@@ -95,9 +95,9 @@
                 "public": true,
                 "pages": [
                   "essentials/some-page-here",
+                  "ai-tools/windsurf",
                   "ai-tools/cursor",
                   "ai-tools/cc-retired",
-                  "ai-tools/windsurf",
                   "lkj",
                   "ai-tools/asdf",
                   "ai-tools/burasdf",
@@ -114,6 +114,20 @@
                   "some-page-1"
                 ]
               }
+            ]
+          },
+          {
+            "tab": "PrimeRL Deubgging",
+            "pages": [
+              {
+                "group": "PrimeIndex",
+                "public": true,
+                "pages": [
+                  "prime-rl/index",
+                  "prime-rl/index2"
+                ]
+              },
+              "asdf-1"
             ]
           },
           {
@@ -137,20 +151,6 @@
                   "api-reference/endpoint/webhook"
                 ]
               }
-            ]
-          },
-          {
-            "tab": "PrimeRL Deubgging",
-            "pages": [
-              {
-                "group": "PrimeIndex",
-                "public": true,
-                "pages": [
-                  "prime-rl/index",
-                  "prime-rl/index2"
-                ]
-              },
-              "asdf-1"
             ]
           },
           {
@@ -243,12 +243,6 @@
                 ]
               },
               {
-                "group": "صفحات أخرى",
-                "pages": [
-                  "ar/somehtin"
-                ]
-              },
-              {
                 "group": "الإيقاف المؤقت والإيقاف",
                 "pages": [
                   "ar/pause",
@@ -266,7 +260,13 @@
               {
                 "group": "وثائق API",
                 "pages": [
-                  "ar/api-reference/adding"
+                  "ar/api-reference/adding",
+                  {
+                    "group": "صفحات أخرى",
+                    "pages": [
+                      "ar/somehtin"
+                    ]
+                  }
                 ]
               },
               "ar/poems/overview",
