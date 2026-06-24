@@ -178,7 +178,8 @@
                 "pages": [
                   "poems/gpt/introduction",
                   "poems/gpt/enter-prompt-below",
-                  "poems/gpt/weighing-craft-poetic-thought-with-wellbeing-protocols"
+                  "poems/gpt/weighing-craft-poetic-thought-with-wellbeing-protocols",
+                  "poems/gpt/page-testing-html"
                 ]
               }
             ]
