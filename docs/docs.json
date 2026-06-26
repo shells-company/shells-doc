@@ -43,7 +43,6 @@
                 "pages": [
                   "index",
                   "page",
-                  "ai-tools/deprecated-tool-2",
                   "ai-tools/deprecated-tool-2-copied-1",
                   "ai-tools/3",
                   "ai-tools/4",
@@ -70,6 +69,7 @@
                   "essentials/starter"
                 ]
               },
+              "ai-tools/deprecated-tool-2",
               {
                 "group": "Navigation-two",
                 "hidden": true,
@@ -91,6 +91,15 @@
                   "essentials/some-new-page"
                 ]
               },
+              "lkjlkj",
+              "new-page-233",
+              "image-testing",
+              {
+                "group": "some-group",
+                "pages": [
+                  "some-page-1"
+                ]
+              },
               {
                 "group": "AI tools",
                 "public": true,
@@ -104,15 +113,6 @@
                   "ai-tools/burasdf",
                   "ai-tools/lkasdjf",
                   "ai-tools/untitled-page-1"
-                ]
-              },
-              "lkjlkj",
-              "new-page-233",
-              "image-testing",
-              {
-                "group": "some-group",
-                "pages": [
-                  "some-page-1"
                 ]
               }
             ]
@@ -191,7 +191,7 @@
                   "todos/may-11th",
                   "todos/may-12th",
                   "todos/may-13th",
-                  "todos/may-26th"
+                  "todos/may-26th-endend"
                 ]
               },
               "todos/weekly-ships-may-11th"
@@ -246,6 +246,7 @@
                 "group": "الإيقاف المؤقت والإيقاف",
                 "pages": [
                   "ar/pause",
+                  "ar/some-page",
                   "ar/paused",
                   "ar/hault"
                 ]
@@ -253,8 +254,7 @@
               {
                 "group": "المسودات",
                 "pages": [
-                  "ar/asdf",
-                  "ar/some-page"
+                  "ar/asdf"
                 ]
               },
               {
