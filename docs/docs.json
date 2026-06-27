@@ -278,6 +278,20 @@
                   "ar/poems/fragments-three.mdx",
                   "ar/poems/fragments-four.mdx"
                 ]
+              },
+              {
+                "group": "أدوات الذكاء الاصطناعي",
+                "pages": [
+                  "ar/ai-tools/some-page-here.mdx",
+                  "ar/ai-tools/windsurf.mdx",
+                  "ar/ai-tools/cc-retired.mdx",
+                  "ar/lkj.mdx",
+                  "ar/ai-tools/asdf.mdx",
+                  "ar/ai-tools/burasdf.mdx",
+                  "ar/ai-tools/lkasdjf.mdx",
+                  "ar/ai-tools/untitled-page-1.mdx",
+                  "ar/ai-tools/cursor.mdx"
+                ]
               }
             ]
           }
