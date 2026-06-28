@@ -1,0 +1,39 @@
+---
+title: 'مقدمة'
+description: 'قسم نموذجي لعرض نقاط نهاية واجهة برمجة التطبيقات'
+---
+
+<Note>
+  إذا لم تكن تتطلع إلى بناء توثيق مرجعي لواجهة برمجة التطبيقات، فيمكنك حذف
+  هذا القسم بإزالة مجلد api-reference.
+
+  هذا قسم رائع حقًا
+</Note>
+
+## مرحبًا
+
+هناك طريقتان لبناء توثيق واجهة برمجة التطبيقات: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) و[مكونات MDX](https://mintlify.com/docs/api-playground/mdx/configuration). بالنسبة لحزمة البداية، نحن نستخدم مواصفات OpenAPI التالية.
+
+<Card
+  title="Plant Store Endpoints"
+  icon="leaf"
+  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+>
+  عرض ملف مواصفات OpenAPI
+</Card>
+
+## المصادقة
+
+تتم مصادقة جميع نقاط نهاية واجهة برمجة التطبيقات باستخدام رموز Bearer ويتم اختيارها من ملف المواصفات.
+
+```json
+"security": [
+  {
+    "bearerAuth": []
+  }
+]
+```
+
+آخر
+
+تحديث صفحة واحدة
