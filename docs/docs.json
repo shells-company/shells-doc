@@ -41,10 +41,10 @@
                 "group": "Getting started",
                 "public": true,
                 "pages": [
+                  "ai-tools/3",
                   "index",
                   "getting-started",
                   "ai-tools/deprecated-tool-2-copied-1",
-                  "ai-tools/3",
                   "ai-tools/untitled-page",
                   "ai-tools/4",
                   "essentials/new-page",
