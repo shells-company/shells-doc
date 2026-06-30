@@ -169,11 +169,7 @@
                   "poems/fragments-last"
                 ]
               },
-              "poems/mirror",
-              "poems/untitled-page",
-              "poems/summer-drift",
-              "poems/spring-cleaning",
-              "haiku/look-up"
+              "poems/summer-drift"
             ]
           },
           {
@@ -204,7 +200,11 @@
               {
                 "group": "Other Pages",
                 "pages": [
-                  "somehtin"
+                  "somehtin",
+                  "poems/untitled-page",
+                  "poems/spring-cleaning",
+                  "poems/mirror",
+                  "haiku/look-up"
                 ]
               },
               {
