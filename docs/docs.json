@@ -149,7 +149,6 @@
                 "pages": [
                   "api-reference/endpoint/get",
                   "api-reference/endpoint/create",
-                  "api-reference/endpoint/delete",
                   "api-reference/endpoint/webhook"
                 ]
               }
@@ -165,7 +164,6 @@
                   "poems/fragments",
                   "poems/fragments-two",
                   "poems/fragments-three",
-                  "poems/fragments-four",
                   "poems/fragments-last"
                 ]
               },
