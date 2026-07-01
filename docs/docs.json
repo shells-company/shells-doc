@@ -50,8 +50,7 @@
                   "essentials/new-page",
                   "page",
                   "ai-tools/something",
-                  "ai-tools/new-page",
-                  "making-new-data"
+                  "ai-tools/new-page"
                 ]
               },
               {
@@ -93,8 +92,6 @@
                 ]
               },
               "lkjlkj",
-              "new-page-233",
-              "image-testing",
               {
                 "group": "some-group",
                 "pages": [
@@ -108,7 +105,6 @@
                   "essentials/some-page-here",
                   "ai-tools/windsurf",
                   "ai-tools/cc-retired",
-                  "lkj",
                   "ai-tools/asdf",
                   "ai-tools/cursor",
                   "ai-tools/burasdf",
