@@ -112,7 +112,13 @@
                   "ai-tools/untitled-page-1"
                 ]
               },
-              "delete-user-account"
+              "delete-user-account",
+              {
+                "group": "Depict blocks",
+                "pages": [
+                  "shopify-guide/blocks/collection-page"
+                ]
+              }
             ]
           },
           {
