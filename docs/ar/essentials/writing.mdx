@@ -1,0 +1,93 @@
+---
+title: 'كتابة المحتوى'
+description: 'النص والعنوان والتنسيق في markdown القياسي — تعديل git v3'
+icon: 'text-size'
+---
+
+<Frame>
+  <img src="/images/hero-light.png" alt="لقطة شاشة لرسالة تأكيد نشر تقول: لقد نجحت جميع الفحوصات." style={{ borderRadius: '0.5rem' }} />
+</Frame>
+
+
+## العناوين
+
+الأفضل استخدامها لعناوين الأقسام.
+
+```md
+## Titles
+```
+
+### العناوين الفرعية
+
+الأفضل استخدامها لعناوين الأقسام الفرعية.
+
+```md
+### Subtitles
+```
+
+<Tip>
+
+يُنشئ كل **عنوان** و**عنوان فرعي** رابطًا مرجعيًا ويظهر أيضًا في جدول المحتويات على اليمين.
+
+</Tip>
+
+## تنسيق النص
+
+نحن ندعم معظم تنسيقات markdown. ما عليك سوى إضافة `**` أو `_` أو `~` حول النص لتنسيقه.
+
+| النمط         | كيفية كتابته      | النتيجة         |
+| ------------- | ----------------- | --------------- |
+| عريض          | `**bold**`        | **bold**        |
+| مائل          | `_italic_`        | _italic_        |
+| يتوسّطه خط    | `~strikethrough~` | ~strikethrough~ |
+
+يمكنك دمج هذه التنسيقات. على سبيل المثال، اكتب `**_bold and italic_**` للحصول على نص **_bold and italic_**.
+
+تحتاج إلى استخدام HTML لكتابة النص المرتفع والمنخفض. أي، أضف `<sup>` أو `<sub>` حول نصك.
+
+| حجم النص    | كيفية كتابته             | النتيجة                |
+| ----------- | ------------------------ | ---------------------- |
+| مرتفع       | `<sup>superscript</sup>` | <sup>superscript</sup> |
+| منخفض       | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+
+## الربط بالصفحات
+
+يمكنك إضافة رابط بلفّ النص بـ `[]()`. يمكنك كتابة `[link to google](https://google.com)` لعمل [رابط إلى google](https://google.com).
+
+يجب أن تكون الروابط إلى صفحات التوثيق نسبيّة إلى الجذر. أي، يجب تضمين مسار المجلد بالكامل. على سبيل المثال، `[link to text](/writing-content/text)` يرتبط بصفحة "النص" في قسم المكوّنات.
+
+الروابط النسبية مثل `[link to text](../text)` ستفتح بشكل أبطأ لأننا لا نستطيع تحسينها بسهولة.
+
+## الاقتباسات
+
+### سطر واحد
+
+لإنشاء اقتباس، أضف `>` أمام الفقرة.
+
+> تبعتها دوروثي عبر كثير من الغرف الجميلة في قصرها.
+
+```md
+> Dorothy followed her through many of the beautiful rooms in her castle.
+```
+
+### متعدد الأسطر
+
+> تبعتها دوروثي عبر كثير من الغرف الجميلة في قصرها.
+>
+> أمرتها الساحرة بتنظيف القدور والأباريق وكنس الأرضية وإبقاء النار مشتعلة بالحطب.
+
+```md
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+```
+
+### LaTeX
+
+يدعم Mintlify [LaTeX](https://www.latex-project.org) عبر مكوّن Latex.
+
+<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+
+```md
+<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+```

@@ -1,0 +1,319 @@
+---
+title: 'الإعدادات العامة'
+description: 'يمنحك Mintlify تحكّمًا كاملاً في مظهر وأسلوب توثيقك باستخدام ملف docs.json'
+icon: 'gear'
+noindex: false
+---
+
+يحتاج كل موقع Mintlify إلى ملف `docs.json` يحتوي على إعدادات التكوين الأساسية. تعرّف على المزيد حول [الخصائص](#properties) أدناه.
+
+## الخصائص
+
+<ResponseField name="name" type="string" required>
+اسم مشروعك. يُستخدم للعنوان العام.
+
+مثال: `mintlify`
+
+</ResponseField>
+
+<ResponseField name="navigation" type="Navigation[]" required>
+  مصفوفة من المجموعات مع جميع الصفحات داخل كل مجموعة
+  <Expandable title="Navigation">
+    <ResponseField name="group" type="string">
+    اسم المجموعة.
+
+    مثال: `Settings`
+
+    </ResponseField>
+    <ResponseField name="pages" type="string[]">
+    المسارات النسبيّة إلى ملفات markdown التي ستُستخدم كصفحات.
+
+    مثال: `["customization", "page"]`
+
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="logo" type="string or object">
+  مسار إلى صورة الشعار أو كائن يحتوي على مسارات صور الشعار لوضعَي "light" و"dark"
+  <Expandable title="Logo">
+    <ResponseField name="light" type="string">
+      مسار الشعار في الوضع الفاتح
+    </ResponseField>
+    <ResponseField name="dark" type="string">
+      مسار الشعار في الوضع الداكن
+    </ResponseField>
+    <ResponseField name="href" type="string" default="/">
+      المكان الذي يُوجّهك إليه النقر على الشعار
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="favicon" type="string">
+  مسار صورة الأيقونة المفضّلة (favicon)
+</ResponseField>
+
+<ResponseField name="colors" type="Colors">
+  أكواد الألوان بصيغة Hex للسمة العامة الخاصة بك
+  <Expandable title="Colors">
+    <ResponseField name="primary" type="string" required>
+      اللون الأساسي. يُستخدم في الغالب للمحتوى المُميّز وعناوين
+      الأقسام والتمييزات في الوضع الفاتح
+    </ResponseField>
+    <ResponseField name="light" type="string">
+      اللون الأساسي للوضع الداكن. يُستخدم في الغالب للمحتوى المُميّز
+      وعناوين الأقسام والتمييزات في الوضع الداكن
+    </ResponseField>
+    <ResponseField name="dark" type="string">
+      اللون الأساسي للأزرار المهمّة
+    </ResponseField>
+    <ResponseField name="background" type="object">
+      لون الخلفية في كل من الوضع الفاتح والداكن
+      <Expandable title="Object">
+        <ResponseField name="light" type="string" required>
+          كود لون الخلفية بصيغة hex في الوضع الفاتح
+        </ResponseField>
+        <ResponseField name="dark" type="string" required>
+          كود لون الخلفية بصيغة hex في الوضع الداكن
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topbarLinks" type="TopbarLink[]">
+  مصفوفة من `name`s و`url`s للروابط التي تريد تضمينها في الشريط العلوي
+  <Expandable title="TopbarLink">
+    <ResponseField name="name" type="string">
+    اسم الزر.
+
+    مثال: `Contact us`
+    </ResponseField>
+    <ResponseField name="url" type="string">
+    الرابط عند النقر على الزر. مثال: `https://mintlify.com/docs`
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topbarCtaButton" type="Call to Action">
+  <Expandable title="Topbar Call to Action">
+    <ResponseField name="type" type={'"link" or "github"'} default="link">
+    Link يعرض زرًا. GitHub يعرض معلومات المستودع من الرابط المُقدَّم بما في ذلك عدد نجوم GitHub.
+    </ResponseField>
+    <ResponseField name="url" type="string">
+    إذا كان `link`: ما الذي يرتبط به الزر.
+    
+    إذا كان `github`: رابط المستودع لتحميل معلومات GitHub منه.
+    </ResponseField>
+    <ResponseField name="name" type="string">
+    النص داخل الزر. مطلوب فقط إذا كان `type` هو `link`.
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="versions" type="string[]">
+  مصفوفة من أسماء الإصدارات. استخدم هذا فقط إذا كنت تريد عرض إصدارات مختلفة
+  من الوثائق مع قائمة منسدلة في شريط التنقّل.
+</ResponseField>
+
+<ResponseField name="anchors" type="Anchor[]">
+  مصفوفة من المراسي (anchors)، تتضمّن `icon` و`color` و`url`.
+  <Expandable title="Anchor">
+    <ResponseField name="icon" type="string">
+    أيقونة [Font Awesome](https://fontawesome.com/search?q=heart) المستخدَمة لإبراز المرساة.
+
+    مثال: `comments`
+    </ResponseField>
+    <ResponseField name="name" type="string">
+    اسم تسمية المرساة.
+
+    مثال: `Community`
+    </ResponseField>
+    <ResponseField name="url" type="string">
+      بداية الرابط الذي يحدّد أي الصفحات تدخل في المرساة. عادةً، يكون هذا اسم المجلد الذي تضع فيه صفحاتك.
+    </ResponseField>
+    <ResponseField name="color" type="string">
+      لون hex لخلفية أيقونة المرساة. يمكن أن يكون أيضًا تدرّجًا لونيًا إذا مرّرت كائنًا يحتوي على الخاصيّتَين `from` و`to`، كل منهما لون hex.
+    </ResponseField>
+    <ResponseField name="version" type="string">
+      يُستخدم إذا كنت تريد إخفاء مرساة حتى يتم اختيار إصدار الوثائق الصحيح.
+    </ResponseField>
+    <ResponseField name="isDefaultHidden" type="boolean" default="false">
+      مرّر `true` إذا كنت تريد إخفاء المرساة حتى تُوجّه شخصًا مباشرةً إلى الوثائق داخلها.
+    </ResponseField>
+    <ResponseField name="iconType" default="duotone" type="string">
+      أحد القيم التالية: "brands"، "duotone"، "light"، "sharp-solid"، "solid"، أو "thin"
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topAnchor" type="Object">
+  تجاوز الإعدادات الافتراضية للمرساة العلوية.
+  <Expandable title="Object">
+    <ResponseField name="name" default="Documentation" type="string">
+      اسم المرساة العلوية
+    </ResponseField>
+    <ResponseField name="icon" default="book-open" type="string">
+      أيقونة Font Awesome.
+    </ResponseField>
+    <ResponseField name="iconType" default="duotone" type="string">
+      أحد القيم التالية: "brands"، "duotone"، "light"، "sharp-solid"، "solid"، أو "thin"
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="tabs" type="Tabs[]">
+  مصفوفة من علامات تبويب التنقّل.
+  <Expandable title="Tabs">
+    <ResponseField name="name" type="string">
+      اسم تسمية علامة التبويب.
+    </ResponseField>
+    <ResponseField name="url" type="string">
+      بداية الرابط الذي يحدّد أي الصفحات تدخل في علامة التبويب. عادةً،
+      يكون هذا اسم المجلد الذي تضع فيه صفحاتك.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="api" type="API">
+  إعدادات لواجهة برمجة التطبيقات (API). تعرّف على المزيد حول صفحات API في [مكوّنات API](/api-playground/demo).
+  <Expandable title="API">
+    <ResponseField name="baseUrl" type="string">
+      الرابط الأساسي لجميع نقاط نهاية API. إذا كان `baseUrl` مصفوفة، فسيُتيح ذلك خيارات متعدّدة
+      للرابط الأساسي يمكن للمستخدم التبديل بينها.
+    </ResponseField>
+
+    <ResponseField name="auth" type="Auth">
+      <Expandable title="Auth">
+        <ResponseField name="method" type='"bearer" | "basic" | "key"'>
+          استراتيجية المصادقة المستخدَمة لجميع نقاط نهاية API.
+        </ResponseField>
+        <ResponseField name="name" type="string">
+        اسم مُعامِل المصادقة المستخدَم في ملعب (playground) API.
+
+        إذا كانت الطريقة `basic`، يجب أن يكون التنسيق `[usernameName]:[passwordName]`
+        </ResponseField>
+        <ResponseField name="inputPrefix" type="string">
+        القيمة الافتراضية المصمَّمة لتكون بادئة لحقل إدخال المصادقة.
+
+        على سبيل المثال، إذا كان `inputPrefix` هو `AuthKey`، سيرث حقل المصادقة نتيجة الإدخال الافتراضية بوصفها `AuthKey`.
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+
+    <ResponseField name="playground" type="Playground">
+      إعدادات ملعب (playground) API
+
+      <Expandable title="Playground">
+        <ResponseField name="mode" default="show" type='"show" | "simple" | "hide"'>
+          ما إذا كان الملعب معروضًا أو مخفيًا، أو يعرض نقطة النهاية فقط دون أي تفاعل من المستخدم `simple`
+
+          تعرّف على المزيد في [أدلة الملعب](/api-playground/demo)
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+
+    <ResponseField name="maintainOrder" type="boolean">
+      يضمن تفعيل هذه الراية أن يتطابق ترتيب المفاتيح في صفحات OpenAPI مع ترتيب المفاتيح المُعرَّف في ملف OpenAPI.
+
+      <Warning>سيتم تفعيل هذا السلوك افتراضيًا قريبًا، وعندها سيُهمَل هذا الحقل.</Warning>
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="openapi" type="string | string[]">
+  سلسلة نصية أو مصفوفة من السلاسل النصية تحتوي على رابط (روابط) أو مسار (مسارات) نسبيّة تشير
+  إلى ملف OpenAPI الخاص بك.
+  
+  أمثلة:
+  <CodeGroup>
+    ```json Absolute
+    "openapi": "https://example.com/openapi.json"
+    ```
+    ```json Relative
+    "openapi": "/openapi.json"
+    ```
+    ```json Multiple
+    "openapi": ["https://example.com/openapi1.json", "/openapi2.json", "/openapi3.json"]
+    ```
+  </CodeGroup>
+
+</ResponseField>
+
+<ResponseField name="footerSocials" type="FooterSocials">
+  كائن يمثّل حسابات وسائل التواصل الاجتماعي، حيث يمثّل زوج key:property منصّة التواصل الاجتماعي ورابط الحساب.
+  
+  مثال: 
+  ```json
+  {
+    "x": "https://x.com/mintlify",
+    "website": "https://mintlify.com"
+  }
+  ```
+  <Expandable title="FooterSocials">
+    <ResponseField name="[key]" type="string">
+    إحدى القيم التالية `website`، `facebook`، `x`، `discord`، `slack`، `github`، `linkedin`، `instagram`، `hacker-news`
+    
+    مثال: `x`
+    </ResponseField>
+    <ResponseField name="property" type="string">
+    رابط منصّة التواصل الاجتماعي.
+    
+    مثال: `https://x.com/mintlify`
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="feedback" type="Feedback">
+  إعدادات لتفعيل أزرار التغذية الراجعة
+
+  <Expandable title="Feedback">
+    <ResponseField name="suggestEdit" type="boolean" default="false">
+    يُفعِّل زرًا يسمح للمستخدمين باقتراح تعديلات عبر طلبات السحب (pull requests)
+    </ResponseField>
+    <ResponseField name="raiseIssue" type="boolean" default="false">
+    يُفعِّل زرًا يسمح للمستخدمين بإثارة مشكلة بشأن الوثائق
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="modeToggle" type="ModeToggle">
+  خصِّص مُبدِّل الوضع الداكن.
+  <Expandable title="ModeToggle">
+    <ResponseField name="default" type={'"light" or "dark"'}>
+      عيِّن هذا إذا أردت أن تعرض دائمًا الوضع الفاتح أو الداكن للمستخدمين الجدد. عند عدم
+      تعيينه، نستخدم افتراضيًا الوضع نفسه الذي يستخدمه نظام تشغيل المستخدم.
+    </ResponseField>
+    <ResponseField name="isHidden" type="boolean" default="false">
+      اضبطه على true لإخفاء مُبدِّل الوضع الداكن/الفاتح. يمكنك دمج `isHidden` مع `default` لإجبار وثائقك على استخدام الوضع الفاتح أو الداكن فقط. على سبيل المثال:
+      
+      <CodeGroup>
+      ```json Only Dark Mode
+      "modeToggle": {
+        "default": "dark",
+        "isHidden": true
+      }
+      ```
+
+      ```json Only Light Mode
+      "modeToggle": {
+        "default": "light",
+        "isHidden": true
+      }
+      ```
+      </CodeGroup>
+
+    </ResponseField>
+
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="backgroundImage" type="string">
+  صورة خلفية تُعرض خلف كل صفحة. انظر مثالاً مع
+  [Infisical](https://infisical.com/docs) و[FRPC](https://frpc.io).
+</ResponseField>
