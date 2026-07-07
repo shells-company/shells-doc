@@ -1,0 +1,37 @@
+---
+title: "26 مايو"
+---
+
+## قائمة المهام
+
+- إرسال الشعر إلى The Open Press ([theopenpress@outlook.com](mailto:theopenpress@outlook.com))
+
+## راديو مكالمات Ricky الهاتفية
+
+**المتطلبات:**
+
+- Vapi لرقم الهاتف / التنسيق
+- تصل مكالمة هاتفية → اضغط 1 للراديو، اضغط 2 لاختيار أغنية، اضغط 3 لإضافة أغنية إلى قائمة الانتظار
+- تشغيل الموسيقى عبر Spotify Connect
+- استمر في التشغيل حتى يتم الضغط على زر
+
+**التدفق:**
+
+```text
+Press 2 → "What song do you want to listen to?"
+  songRef = GET USER INPUT()  // waits for user voice
+  → "I got [X Y Z song] — 1 to confirm, 2 to deny?"
+  → return songRef
+  → Play songRef as if a radio (loop back to top)
+
+Press 3 → "What song do you want to queue?"
+  songRef = GET USER INPUT()  // waits for user voice
+  → "I got [X Y Z song] — 1 to confirm, 2 to deny?"
+  → return songRef
+  → Add songRef to Spotify queue
+  → Loop back to top
+```
+
+## Instagram
+
+- معرّف الوسائط لمنشور Instagram: `14b7b871-b7bb-558d-ac24-7fca280990be`

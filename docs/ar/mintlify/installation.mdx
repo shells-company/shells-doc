@@ -1,0 +1,54 @@
+---
+title: "التثبيت"
+---
+
+يعمل Radar على **أي موقع ويب أو تطبيق**: ما عليك سوى إضافة سكربت تتبع صغير إلى `<head>` مستندك. يستغرق التثبيت أقل من دقيقتين ولا يتطلب أي مهارات تقنية متقدمة.
+
+بمجرد إضافة السكربت إلى جميع صفحاتك، يبدأ Radar في جمع البيانات **فوراً**: سترى أول زوّارك يظهرون في الوقت الفعلي على لوحة التحكم.
+
+## سكربت التثبيت
+
+توجد **طريقة تثبيت واحدة فقط**: انسخ السكربت أدناه والصقه في `<head>` موقعك في كل صفحة.
+
+```html
+<script
+  src="https://cdn.taap.it/radar.js"
+  data-token="YOUR_TOKEN">
+</script>
+```
+
+هذا كل شيء. السكربت **هو نفسه بغض النظر عن موقعك**.
+
+## أدلة الأطر (اختياري)
+
+السكربت **متطابق في كل مكان** — تُظهر هذه الأدلة ببساطة **أين يتم وضعه** حسب الحزمة التقنية لديك (Next.js، React، Vue، إلخ).
+
+React · Next.js · Vue.js · Nuxt · SvelteKit · Astro · Angular
+
+<Frame>
+  ![Tech Stacks (1)](/images/Tech-Stacks-\(1\).png)
+</Frame>
+
+<div style="display:flex; flex-wrap:wrap; gap:16px;">
+  <div style="border:1px solid #eee; border-radius:12px; padding:20px; text-align:center; width:120px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" />
+
+    <p><strong>React</strong></p>
+  </div>
+
+  <div style="border:1px solid #eee; border-radius:12px; padding:20px; text-align:center; width:120px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="48" />
+
+    <p><strong>Next JS</strong></p>
+  </div>
+
+  {/*  Répète pour Vue, Nuxt, SveltKit, Astro, Angular  */}
+</div>
+
+## ما التالي؟
+
+بمجرد تثبيت Radar، يمكنك المضي قدماً:
+
+- **تتبع الإجراءات الرئيسية** (التسجيلات، المشتريات، النقرات) ← الأحداث المخصصة.
+- **إسناد الإيرادات** عن طريق ربط Stripe ← رؤى المبيعات.
+- **تحديد المستخدمين المسجلين والعملاء** ← المستخدمون المحدَّدون.

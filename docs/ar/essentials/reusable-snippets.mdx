@@ -1,0 +1,109 @@
+---
+title: "المقتطفات القابلة لإعادة الاستخدام"
+description: "مقتطفات مخصّصة وقابلة لإعادة الاستخدام للحفاظ على تزامن المحتوى"
+icon: "recycle"
+---
+
+import SnippetIntro from '/snippets/snippet-intro.mdx';
+
+<SnippetIntro />
+
+## إنشاء مقتطف مخصص
+
+**الشرط المسبق**: يجب أن تُنشئ ملف المقتطف الخاص بك في مجلد `snippets`.
+
+<Note>
+  أي صفحة في مجلد `snippets` ستُعامَل على أنها مقتطف ولن يتم عرضها كصفحة
+  مستقلة. إذا أردت إنشاء صفحة مستقلة من المقتطف، فاستورد المقتطف إلى ملف آخر
+  واستدعِه كمكوّن.
+</Note>
+
+### التصدير الافتراضي
+
+1. أضف المحتوى إلى ملف المقتطف الذي تريد إعادة استخدامه عبر مواقع متعددة.
+   اختياريًا، يمكنك إضافة متغيرات يمكن ملؤها عبر props
+   عند استيراد المقتطف.
+
+```mdx snippets/my-snippet.mdx
+Hello world! This is my content I want to reuse across pages. My keyword of the
+day is {word}.
+```
+
+<Warning>
+  يجب أن يكون المحتوى الذي تريد إعادة استخدامه داخل مجلد `snippets` حتى
+  يعمل الاستيراد.
+</Warning>
+
+2. استورد المقتطف إلى ملف الوجهة.
+
+```mdx destination-file.mdx
+---
+title: My title
+description: My Description
+---
+
+import MySnippet from '/snippets/path/to/my-snippet.mdx';
+
+## Header
+
+Lorem impsum dolor sit amet.
+
+<MySnippet word="bananas" />
+```
+
+### المتغيرات القابلة لإعادة الاستخدام
+
+1. صدِّر متغيرًا من ملف المقتطف:
+
+```mdx snippets/path/to/custom-variables.mdx
+export const myName = 'my name';
+
+export const myObject = { fruit: 'strawberries' };
+```
+
+2. استورد المقتطف من ملف الوجهة واستخدم المتغير:
+
+```mdx destination-file.mdx
+---
+title: My title
+description: My Description
+---
+
+import { myName, myObject } from '/snippets/path/to/custom-variables.mdx';
+
+Hello, my name is {myName} and I like {myObject.fruit}.
+```
+
+### المكوّنات القابلة لإعادة الاستخدام
+
+1. داخل ملف المقتطف، أنشئ مكوّنًا يستقبل props بتصدير
+   مكوّنك على هيئة دالة سهمية.
+
+```mdx snippets/custom-component.mdx
+export const MyComponent = ({ title }) => (
+  <div>
+    <h1>{title}</h1>
+    <p>... snippet content ...</p>
+  </div>
+);
+```
+
+<Warning>
+  لا يُترجم MDX داخل جسم الدالة السهمية. التزم بصيغة HTML
+  عندما تستطيع، أو استخدم التصدير الافتراضي إذا كنت بحاجة إلى استخدام MDX.
+</Warning>
+
+2. استورد المقتطف إلى ملف الوجهة ومرِّر الـ props
+
+```mdx destination-file.mdx
+---
+title: My title
+description: My Description
+---
+
+import { MyComponent } from '/snippets/custom-component.mdx';
+
+Lorem ipsum dolor sit amet.
+
+<MyComponent title={'Custom title'} />
+```

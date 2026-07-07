@@ -1,0 +1,59 @@
+---
+title: 'الصور والتضمينات'
+description: 'إضافة الصور والفيديو وعناصر HTML الأخرى'
+icon: 'image'
+---
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+/>
+
+## الصورة
+
+### باستخدام Markdown
+
+تتيح لك [صيغة markdown](https://www.markdownguide.org/basic-syntax/#images) إضافة الصور باستخدام الكود التالي
+
+```md
+![title](/path/image.jpg)
+```
+
+لاحظ أن حجم ملف الصورة يجب أن يكون أقل من 5 ميغابايت. وإلا، نوصي بالاستضافة على خدمة مثل [Cloudinary](https://cloudinary.com/) أو [S3](https://aws.amazon.com/s3/). ثم يمكنك استخدام هذا الرابط وتضمينه.
+
+### باستخدام التضمينات
+
+للحصول على مزيد من التخصيص للصور، يمكنك أيضًا استخدام [التضمينات](/writing-content/embed) لإضافة الصور
+
+```html
+<img height="200" src="/path/image.jpg" />
+```
+
+## التضمينات وعناصر HTML
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/4KzFe50RQkQ"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ width: '100%', borderRadius: '0.5rem' }}
+></iframe>
+
+<br />
+
+<Tip>
+
+يدعم Mintlify [وسوم HTML في Markdown](https://www.markdownguide.org/basic-syntax/#html). هذا مفيد إذا كنت تفضّل وسوم HTML على صيغة Markdown، ويتيح لك إنشاء توثيق بمرونة لا نهائية.
+
+</Tip>
+
+### iFrames
+
+يقوم بتحميل صفحة HTML أخرى داخل المستند. يُستخدم غالبًا لتضمين مقاطع الفيديو.
+
+```html
+<iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
+```
