@@ -1,0 +1,221 @@
+---
+title: "Manager Dashboard"
+description: "Manage Organization members' permissions and access to data"
+language: "en"
+---
+
+Organization Managers have special capabilities to modify Workspace and Member settings, accessible via the [Manager Dashboard](https://voyager.lumafield.com/manage). This is a separate Dashboard from the [Project Dashboard](/voyager/voyager-dashboard), to which all Members of an Organization have access.
+
+Organization Managers can grant other Members the Organization Manager status from the Manager Dashboard as well.
+
+<Tip>
+  If you forget who your Organization Managers are, reach out to [support@lumafield.com](mailto:support@lumafield.com).
+</Tip>
+
+### **Accessing the Manager Dashboard** {#accessing-the-manager-dashboard}
+
+Users with Organization Manager status can access the [Manager Dashboard](https://app.lumafield.com/manage) by selecting their name in the top right corner of Voyager, and selecting Manage Organization.
+
+<Frame>
+  <img
+    src="/images/MD_Access.png"
+    alt="MD Access"
+    title="MD Access"
+    style={{ width:"65%" }}
+  />
+</Frame>
+
+Use the Tabs at the left to view the sections of the Manager Dashboard.
+
+<Frame>
+  <img
+    src="/images/MDT.png"
+    alt="MDT"
+    title="MDT"
+    style={{ width:"42%" }}
+  />
+</Frame>
+
+View settings per tab below.
+
+<Tabs>
+  <Tab title="Plan">
+    ### Pro \+ Enterprise plan usage
+
+    Users on the Pro or Enterprise plan can view the capabilities of each plan, and view which plan their team currently uses.
+
+    <Frame>
+      ![Image](/images/image-11.png)
+    </Frame>
+
+    See your Organization's resource usage, including Active and Inactive Storage, Token usage, and Seat allocation. Read more about [Storage](/storage).
+
+    <Frame>
+      ![Image](/images/image-13.png)
+    </Frame>
+
+    ### Legacy plan usage
+
+    Users on the Legacy pricing plan are able to view active [Modules](/platform/analysis-modules) as well as allocated and occupied Editor seats.
+
+    <Frame>
+      ![Image](/images/image-12.png)
+    </Frame>
+  </Tab>
+  <Tab title="Settings">
+    ### Organization-wide Settings
+
+    **Link Sharing:**  Allow users to enable "Anyone with the Link" sharing within that Project. If disabled, no Projects within your Organization can have "Anyone with the Link" sharing enabled.
+
+    **Enable Automatic Read-Only Migration:** After Active Storage is exceeded, migrate the least-recently accessed Projects to Read-Only Storage rather than Inactive Storage.
+
+    <Frame>
+      ![Manager Dashboard Settings](/images/Manager_Dashboard_Settings.png)
+    </Frame>
+
+    ### 
+  </Tab>
+  <Tab title="Members">
+    ### Members settings
+
+    Add and manage all users in your Organization from the Members Tab.
+
+    <Frame>
+      ![Manager Dashboard Members](/images/Manager_Dashboard_Members.png)
+    </Frame>
+
+    1. Add a member to your Organization. You'll be prompted to enter the user's email - if they do not yet have a Voyager account, they will be invited to create one. You'll also be asked to choose a Workspace to add the new member too and set Viewer/Editor status.
+
+    <Frame>
+      <img
+        src="/images/Add_Member_Dialog.png"
+        alt="Add Member Dialog"
+        title="Add Member Dialog"
+        style={{ width:"61%" }}
+      />
+    </Frame>
+
+    2. Set an existing user as an Organization Manager. Doing so will allow the user to access the Manager Dashboard, including all controls on this article.
+    3. Remove a member from your Organization. They will no longer be a member of any Workspaces within your Organization.
+    4. Modify a user's Workspace access level. Choose between Viewer and Editor status.
+    5. Add a user to a Workspace in your Organization. The new user will be added with Viewer status by default, which can be changed if desired.
+    6. Remove a user's access to a Workspace.
+
+    <Note>
+      If your Organization has Link Sharing enabled, any user, **even if not a member of your Organization,** can view Projects on which Link Sharing is turned on.
+    </Note>
+
+    ### **Adding Voyager Users on GovCloud/On-Prem**
+
+    Adding users to a Voyager Organization for a GovCloud or On-Prem Organzation follows slightly different steps.
+
+    1. Select "ADD MEMBER" on the right
+
+    <Frame>
+      ![Image](/images/image-5.png)
+    </Frame>
+
+    2. Populate the fields and set the new user as either an Editor or a Viewer, then select the blue "ADD MEMBER" button to create the new user account and generate the temporary password
+
+    <Warning>
+      Be sure to copy this password before navigating away from this page.
+    </Warning>
+
+    <Frame>
+      <img
+        src="/images/image-6.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"63%" }}
+      />
+    </Frame>
+
+    3. Copy the password by clicking on the yellow text, and send it securely to that team member
+    4. Have the new user navigate to [<u>https://voyager.gov.lumafield.com</u>](https://voyager.gov.lumafield.com), and select "CHANGE PASSWORD" at the bottom of the dialog box on the right
+
+    <Frame>
+      <img
+        src="/images/image-7.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"26%" }}
+      />
+    </Frame>
+
+    5. Have the new user fill in all four fields of the "Change your password" form:
+
+    <Frame>
+      <img
+        src="/images/image-8.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"41%" }}
+      />
+    </Frame>
+
+    - **E-mail**: Enter the email address for your account
+    - **Current Password**: Enter the temporary password provided by the Organization Manager
+    - **Password**: Enter your new desired password.
+    - **Password Confirmation**: Re-enter your new password to confirm it.
+
+    6. Select "UPDATE PASSWORD."
+
+    Congrats! You have added a new team member successfully!
+
+    ### **Resetting Passwords for Users on GovCloud/On-Prem**
+
+    Resetting a password for GovCloud or On-Prem configurations of Voyager will require the assistance of an active user with Organization Manager privileges, and can be done through the Members tab of the Manager Dashboard
+
+    The user with the Organization Manager account, can initiate the reset by finding the user under the members list in need of a password reset, selecting "RESET", and following the listed directions to reset credentials.
+  </Tab>
+  <Tab title="Workspaces">
+    ### Workspaces settings
+
+    Workspaces are the primary unit of Project organization within Voyager. The Workspace that a Project is in determines who has access to that Project.
+
+    <Frame>
+      ![Manager Dashboard Workspaces](/images/Manager_Dashboard_Workspaces.jpg)
+    </Frame>
+
+    1. Add a Workspace to your Organization. You'll be asked to input a name for the new Workspace, and you can add members and add projects to your Workspace after it has been created.
+    2. Rename a workspace
+    3. Set a default Workspace. If default Workspaces are not set at the [Scanner](https://lumafield-manager-dashboards-june2026.mintlify.io/voyager/voyager-manager-dashboard#scanners) level, this will determine the default location where Projects are created from scans.
+    4. Remove a Workspace
+    5. Add a member within your Organization to a Workspace. To invite a member who is not yet in your Organization to a Workspace, follow the instructions in the [Members](http://support.lumafield.com/voyager/voyager-manager-dashboard#members) tab.
+    6. Modify a user's Workspace status, between Viewer and Editor.
+
+    To **create** a Workspace, select Add Workspace in the Workspaces section. Give the new Workspace a name and select Create Workspace.
+
+    Now the new Workspace can have Members added to it. Navigate to the Members section and assign users access to the new Workspace to give access to team members.
+
+    To **remove** a Workspace, select the Workspace's Remove button in the Workspaces section. If there are Projects in the Workspace, choose a destination Workspace to migrate those Projects to and select confirm - Projects will migrate shortly.
+
+    <kbd>Do not remove your organization's default workspace from the list of allowed workspaces.</kbd>
+  </Tab>
+  <Tab title="Scanners">
+    ### Scanner management settings
+
+    If at least one scanner is part of your Organization, you'll be able to manage your scanners from the Scanners tab. Scanners that are part of the Managed Organization will appear in a list in the Scanners section.
+
+    <Frame>
+      ![Scanners Page](/images/Scanners_Page.jpg)
+    </Frame>
+
+    A scanner can be renamed by selecting its name.
+
+    ### Scanner Workspace access
+
+    Provision which Workspaces a scanner can create Projects into. Allow all Workspaces, or choose manually from a list.
+
+    <Note>
+      The Scanner's default Workspace cannot be removed from the list of accessible Workspaces.
+    </Note>
+
+    <Frame>
+      ![Manager Dashboard Scanner Workspace Access](/images/Manager_Dashboard_ScannerWorkspaceAccess.png)
+    </Frame>
+  </Tab>
+</Tabs>
