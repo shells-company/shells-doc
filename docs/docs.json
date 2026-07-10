@@ -38,7 +38,7 @@
             "tab": "GuideS",
             "pages": [
               {
-                "group": "Getting started",
+                "group": "1. Getting started",
                 "public": true,
                 "pages": [
                   "mintlify/installation",
@@ -56,7 +56,7 @@
                 ]
               },
               {
-                "group": "Customization",
+                "group": "2. Customization",
                 "hidden": true,
                 "public": true,
                 "pages": [
@@ -64,7 +64,7 @@
                 ]
               },
               {
-                "group": "Navigation-one",
+                "group": "3. Navigation-one",
                 "hidden": true,
                 "public": true,
                 "pages": [
@@ -73,7 +73,7 @@
               },
               "ai-tools/deprecated-tool-2",
               {
-                "group": "Navigation-two",
+                "group": "5. Navigation-two",
                 "hidden": true,
                 "public": true,
                 "pages": [
@@ -81,7 +81,7 @@
                 ]
               },
               {
-                "group": "Writing content",
+                "group": "6. Writing content",
                 "public": true,
                 "pages": [
                   "essentials/writing",
@@ -93,14 +93,15 @@
                   "essentials/some-new-page"
                 ]
               },
+              "lkjlkj",
               {
-                "group": "some-group",
+                "group": "8. some-group",
                 "pages": [
                   "some-page-1"
                 ]
               },
               {
-                "group": "AI tools",
+                "group": "9. AI tools",
                 "public": true,
                 "pages": [
                   "essentials/some-page-here",
@@ -115,7 +116,7 @@
               },
               "delete-user-account",
               {
-                "group": "Depict blocks",
+                "group": "11. Depict blocks",
                 "pages": [
                   "shopify-guide/blocks/collection-page"
                 ]
