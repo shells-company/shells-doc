@@ -42,7 +42,6 @@
                 "public": true,
                 "pages": [
                   "mintlify/installation",
-                  "ai-tools/3",
                   "index",
                   "getting-started",
                   "ai-tools/deprecated-tool-2-copied-1",
