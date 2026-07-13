@@ -52,7 +52,8 @@
                   "page",
                   "ai-tools/something",
                   "ai-tools/new-page",
-                  "voyager-manager-dashboard"
+                  "voyager-manager-dashboard",
+                  "this-is-a-page-without-a-path"
                 ]
               },
               {
@@ -205,8 +206,7 @@
                   "somehtin",
                   "poems/untitled-page",
                   "poems/spring-cleaning",
-                  "poems/mirror",
-                  "haiku/look-up"
+                  "poems/mirror"
                 ]
               },
               {
