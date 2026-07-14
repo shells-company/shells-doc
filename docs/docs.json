@@ -105,6 +105,7 @@
                 "public": true,
                 "pages": [
                   "essentials/some-page-here",
+                  "ai-tools/untitled-page-1",
                   "ai-tools/windsurf",
                   "ai-tools/cc-retired",
                   "ai-tools/asdf",
