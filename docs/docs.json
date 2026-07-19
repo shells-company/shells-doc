@@ -95,12 +95,6 @@
                 ]
               },
               {
-                "group": "8. some-group",
-                "pages": [
-                  "some-page-1"
-                ]
-              },
-              {
                 "group": "9. AI tools",
                 "public": true,
                 "pages": [
@@ -221,6 +215,17 @@
                 "pages": [
                   "asdf",
                   "some-page"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "New tab",
+            "pages": [
+              {
+                "group": "8. some-group",
+                "pages": [
+                  "some-page-1"
                 ]
               }
             ]
