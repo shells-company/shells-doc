@@ -10,7 +10,7 @@
   "favicon": "/favicon.svg",
   "fonts": {
     "family": "Atkinson",
-    "source": "fonts/atkinson-regular.woff",
+    "source": "/fonts/atkinson-regular.woff",
     "format": "woff",
     "weight": 400
   },
@@ -53,8 +53,7 @@
                   "ai-tools/something",
                   "ai-tools/new-page",
                   "voyager-manager-dashboard",
-                  "this-is-a-page-without-a-path",
-                  "ai-tools/testign-zir"
+                  "this-is-a-page-without-a-path"
                 ]
               },
               {
@@ -330,8 +329,7 @@
       "mcp",
       "cursor",
       "vscode"
-    ],
-    "display": "header"
+    ]
   },
   "footer": {
     "socials": {
