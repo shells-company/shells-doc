@@ -53,7 +53,8 @@
                   "ai-tools/something",
                   "ai-tools/new-page",
                   "voyager-manager-dashboard",
-                  "this-is-a-page-without-a-path"
+                  "this-is-a-page-without-a-path",
+                  "ai-tools/draft-aft"
                 ]
               },
               {
