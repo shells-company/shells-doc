@@ -50,10 +50,12 @@
                   "page",
                   "ai-tools/4",
                   "ai-tools/4",
+                  "ai-tools/4",
                   "ai-tools/something",
                   "ai-tools/new-page",
                   "voyager-manager-dashboard",
                   "this-is-a-page-without-a-path",
+                  "ai-tools/new-page-1",
                   "ai-tools/new-page-1",
                   "ai-tools/new-page-1"
                 ]
@@ -217,6 +219,17 @@
                 "pages": [
                   "asdf",
                   "some-page"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "New tab",
+            "pages": [
+              {
+                "group": "8. some-group",
+                "pages": [
+                  "some-page-1"
                 ]
               }
             ]
