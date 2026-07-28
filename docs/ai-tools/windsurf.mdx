@@ -25,6 +25,10 @@ Create workspace rules that provide Windsurf with context about your documentati
   </Tab>
 </Tabs>
 
+<Warning>
+  Both sets of rules load together, so contradictions between them produce inconsistent results. Keep global rules general and let workspace rules own anything project-specific.
+</Warning>
+
 Create `.windsurf/rules.md` in your project root:
 
 ````markdown
@@ -141,6 +145,19 @@ Once your rules are in place, Cascade follows them for every request in the work
   Reference a specific file in your prompt with `@` followed by the filename. Pointing Cascade at an existing page you like is the fastest way to get consistent structure in a new one.
 </Tip>
 
+### Example request
+
+A prompt that combines a target path, a source of truth, and a structural reference gives Cascade everything it needs in one pass:
+
+```text
+Create docs/guides/rate-limits.mdx documenting our rate limits.
+Use @src/middleware/ratelimit.ts for the actual values and
+@docs/guides/authentication.mdx as a structural reference.
+Add the page to docs.json under the Guides group.
+```
+
+Expect a draft that needs light editing rather than a finished page. Verify every number against the source file before publishing.
+
 ## Troubleshooting
 
 <AccordionGroup>
@@ -161,7 +178,7 @@ Once your rules are in place, Cascade follows them for every request in the work
   <Card title="Cursor setup" icon="arrow-pointer" href="/ai-tools/cursor">
     Apply the same rules-based approach in Cursor.
   </Card>
-  <Card title="AI tools overview" icon="sparkles" href="/ai-tools/ai-tools">
-    Compare the editors and assistants that work with Mintlify docs.
+  <Card title="Writing content" icon="pen-nib" href="/essentials/writing">
+    Review the writing conventions your rules file enforces.
   </Card>
 </CardGroup>
