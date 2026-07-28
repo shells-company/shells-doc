@@ -1,3 +1,7 @@
+---
+title: "index "
+---
+
 # Docs
 
 This directory maintains the documentation for PRIME-RL. It is organized into the following sections:
