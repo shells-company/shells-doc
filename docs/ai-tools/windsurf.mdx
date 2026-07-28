@@ -10,6 +10,7 @@ Configure Windsurf's Cascade AI assistant to help you write and maintain documen
 
 - Windsurf editor installed
 - Access to your documentation repository
+- Your docs repository cloned locally and opened as a Windsurf workspace
 
 ## Workspace rules
 
@@ -113,3 +114,30 @@ description: "Concise description for SEO and navigation"
 <Tip>
   Commit `.windsurf/rules.md` to your repository so everyone on your team shares the same documentation standards.
 </Tip>
+
+## Working with Cascade
+
+Once your rules are in place, Cascade follows them for every request in the workspace. A few prompts that work well for documentation:
+
+- **Draft a new page:** "Create a new page at `docs/guides/webhooks.mdx` documenting our webhook payloads."
+- **Review for style:** "Review this page against our writing standards and list what to change."
+- **Add navigation:** "Add this page to `docs.json` under the Guides group."
+- **Convert content:** "Rewrite these numbered steps using the `<Steps>` component."
+
+<Note>
+  Cascade edits files directly. Review its changes in the diff view before accepting them.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Cascade ignores the workspace rules">
+    Confirm the file is at `.windsurf/rules.md` relative to the workspace root, not a subdirectory. If you opened a parent folder containing multiple repositories, reopen the docs repository as its own workspace.
+  </Accordion>
+  <Accordion title="Generated pages are missing frontmatter">
+    Rules apply to new requests, not existing conversations. Start a fresh Cascade conversation after editing `.windsurf/rules.md`.
+  </Accordion>
+  <Accordion title="Suggestions use components we don't use">
+    Trim the components section of your rules file to only the components your docs actually rely on. Shorter, more specific rules produce more consistent output.
+  </Accordion>
+</AccordionGroup>
