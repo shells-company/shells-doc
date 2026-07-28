@@ -52,6 +52,89 @@
                 ]
               },
               {
+                "group": "asdf",
+                "pages": [
+                  "ai-tools/3",
+                  "index",
+                  "getting-started",
+                  "ai-tools/deprecated-tool-2-copied-1",
+                  "ai-tools/untitled-page",
+                  "ai-tools/4"
+                ]
+              },
+              {
+                "group": "3. Navigation-one",
+                "hidden": true,
+                "public": true,
+                "pages": [
+                  "essentials/starter"
+                ]
+              },
+              "ai-tools/deprecated-tool-2",
+              {
+                "group": "5. Navigation-two",
+                "hidden": true,
+                "public": true,
+                "pages": [
+                  "essentials/starter"
+                ]
+              },
+              {
+                "group": "6. Writing content",
+                "public": true,
+                "pages": [
+                  "essentials/writing",
+                  "essentials/images",
+                  "essentials/reusable-snippets",
+                  "essentials/code",
+                  "essentials/site-map",
+                  "essentials/sadf",
+                  "essentials/some-new-page"
+                ]
+              },
+              {
+                "group": "8. some-group",
+                "pages": [
+                  "some-page-1"
+                ]
+              },
+              {
+                "group": "9. AI tools",
+                "public": true,
+                "pages": [
+                  "essentials/some-page-here",
+                  "ai-tools/untitled-page-1",
+                  "ai-tools/windsurf",
+                  "ai-tools/cc-retired",
+                  "ai-tools/asdf",
+                  "ai-tools/cursor",
+                  "ai-tools/burasdf",
+                  "ai-tools/lkasdjf"
+                ]
+              },
+              "delete-user-account",
+              {
+                "group": "11. Depict blocks",
+                "pages": [
+                  "shopify-guide/blocks/collection-page"
+                ]
+              },
+              "untitled-page-2",
+              {
+                "group": "1. Getting started",
+                "public": true,
+                "pages": [
+                  "mintlify/installation",
+                  "essentials/new-page",
+                  "page",
+                  "essentials/starter",
+                  "ai-tools/something",
+                  "ai-tools/new-page",
+                  "voyager-manager-dashboard",
+                  "this-is-a-page-without-a-path"
+                ]
+              },
+              {
                 "group": "2. Customization",
                 "hidden": true,
                 "public": true,
