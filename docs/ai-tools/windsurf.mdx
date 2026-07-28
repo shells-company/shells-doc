@@ -16,6 +16,15 @@ Configure Windsurf's Cascade AI assistant to help you write and maintain documen
 
 Create workspace rules that provide Windsurf with context about your documentation project and standards.
 
+<Tabs>
+  <Tab title="Workspace rules">
+    Scoped to a single repository and committed alongside your docs, so the whole team gets the same behavior. Use this for anything specific to your documentation project.
+  </Tab>
+  <Tab title="Global rules">
+    Configured in Windsurf's settings and applied across every workspace. Keep these short and preference-based, such as tone or formatting habits that follow you between projects.
+  </Tab>
+</Tabs>
+
 Create `.windsurf/rules.md` in your project root:
 
 ````markdown
@@ -128,6 +137,10 @@ Once your rules are in place, Cascade follows them for every request in the work
   Cascade edits files directly. Review its changes in the diff view before accepting them.
 </Note>
 
+<Tip>
+  Reference a specific file in your prompt with `@` followed by the filename. Pointing Cascade at an existing page you like is the fastest way to get consistent structure in a new one.
+</Tip>
+
 ## Troubleshooting
 
 <AccordionGroup>
@@ -141,3 +154,14 @@ Once your rules are in place, Cascade follows them for every request in the work
     Trim the components section of your rules file to only the components your docs actually rely on. Shorter, more specific rules produce more consistent output.
   </Accordion>
 </AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Cursor setup" icon="arrow-pointer" href="/ai-tools/cursor">
+    Apply the same rules-based approach in Cursor.
+  </Card>
+  <Card title="AI tools overview" icon="sparkles" href="/ai-tools/ai-tools">
+    Compare the editors and assistants that work with Mintlify docs.
+  </Card>
+</CardGroup>
