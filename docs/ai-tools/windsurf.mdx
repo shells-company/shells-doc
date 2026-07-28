@@ -94,3 +94,22 @@ description: "Concise description for SEO and navigation"
 - Ensure proper heading hierarchy (start with h2)
 - Check existing patterns for consistency
 ````
+
+## Verify your setup
+
+<Steps>
+  <Step title="Reload the workspace">
+    Reopen your project in Windsurf so Cascade picks up the new `.windsurf/rules.md` file.
+  </Step>
+  <Step title="Ask Cascade to draft a page">
+    Open Cascade and ask it to create a new documentation page. It should include frontmatter with `title` and `description`, and use Mintlify components like `<Steps>` and `<Note>`.
+
+    <Check>
+      If the generated page follows your writing standards and uses Mintlify components, your workspace rules are active.
+    </Check>
+  </Step>
+</Steps>
+
+<Tip>
+  Commit `.windsurf/rules.md` to your repository so everyone on your team shares the same documentation standards.
+</Tip>
