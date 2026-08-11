@@ -566,6 +566,7 @@
                 "group": "API documentation",
                 "public": true,
                 "pages": [
+                  "snippets/snippet-intro",
                   "api-reference/introduction",
                   "api-reference/adding"
                 ]
