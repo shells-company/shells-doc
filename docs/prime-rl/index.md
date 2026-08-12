@@ -4,6 +4,10 @@ title: "index "
 
 # Docs
 
+434Ok, can you tell me whyu?
+
+aint nothing but a heart ache!!!
+
 This directory maintains the documentation for PRIME-RL. It is organized into the following sections:
 
 - [**Entrypoints**](entrypoints.md) - Overview of the main components (orchestrator, trainer, inference) and how to run SFT, RL, and evals
@@ -16,3 +20,5 @@ This directory maintains the documentation for PRIME-RL. It is organized into th
 - [**Benchmarking**](benchmarking.md) - Performance benchmarking and throughput measurement
 - [**Deployment**](deployment.md) - Training deployment on single-GPU, multi-GPU, and multi-node clusters
 - [**Troubleshooting**](troubleshooting.md) - Common issues and their solutions
+
+tell me whyyyyyyyy
