@@ -719,6 +719,22 @@
                   }
                 ]
               },
+              {
+                "group": "ShellDB",
+                "pages": [
+                  "ar/shelldb/index",
+                  "ar/shelldb/quickstart"
+                ]
+              },
+              {
+                "group": "نقاط نهاية ShellDB",
+                "openapi": "shelldb/openapi.yaml",
+                "pages": [
+                  "POST /api/index",
+                  "POST /api/search",
+                  "GET /api/{dataset}/tags"
+                ]
+              },
               "ar/poems/overview",
               {
                 "group": "Arabic Fragments",
