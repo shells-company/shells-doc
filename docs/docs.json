@@ -584,6 +584,22 @@
                   "api-reference/endpoint/create",
                   "api-reference/endpoint/webhook"
                 ]
+              },
+              {
+                "group": "ShellDB",
+                "pages": [
+                  "shelldb/index",
+                  "shelldb/quickstart"
+                ]
+              },
+              {
+                "group": "ShellDB endpoints",
+                "openapi": "shelldb/openapi.yaml",
+                "pages": [
+                  "POST /api/index",
+                  "POST /api/search",
+                  "GET /api/{dataset}/tags"
+                ]
               }
             ]
           },
