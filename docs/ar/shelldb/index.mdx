@@ -1,0 +1,85 @@
+---
+title: "مقدمة ShellDB"
+description: "ShellDB هي قاعدة بيانات ملفات تعالج أوامر الصدفة على الملفات المفهرسة"
+---
+
+## ما هي ShellDB؟
+
+ShellDB هي قاعدة بيانات ملفات تشغّل أوامر بحث الصدفة على ملفاتك المفهرسة.
+
+تشغّل نقطة النهاية `POST /api/search` الأمر `grep` افتراضيًا. عيّن الحقل الاختياري `command` في حمولة البحث لتشغيل أمر بحث مختلف، مثل `rg` أو `awk`.
+
+تدعم ShellDB أيضًا وسم الملفات `tagging`. يتيح لك وسم ملف بناء عوامل تصفية تجمع بين عدة وسوم معًا.
+
+## تشغيل ShellDB
+
+```sh
+docker run cdxker/shelldb -p 8080:8080
+```
+
+## البنية
+
+- تُخزَّن الملفات ضمن `${dataDir}/dataset_id/path/to/file`
+- تُخزَّن الملفات الموسومة ضمن `${dataDir}/dataset_id/___tag/path/to/file`
+
+## فهرسة الملفات
+
+لفهرسة ملف، أرسل الملف كاملًا كحمولة إلى `POST /api/index`.
+
+الحقل `dataset` هو الفهرس الذي تضيف الملف إليه. إذا لم تكن مجموعة البيانات موجودة، تنشئ ShellDB واحدة لك.
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/index \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "filename": "test.txt",
+    "file_payload": "override",
+    "tags": []
+  }'
+```
+
+## البحث
+
+ابحث في مجموعة بيانات باستخدام `POST /api/search`. افتراضيًا، تشغّل ShellDB الأمر `grep` مع الرايات التي تمررها.
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r hello",
+    "folder_filter": []
+  }'
+```
+
+### استخدام أمر بحث مختلف
+
+مرّر الحقل الاختياري `command` لتشغيل أمر بحث آخر بدلًا من `grep`:
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-i hello",
+    "folder_filter": [],
+    "command": "rg"
+  }'
+```
+
+يجب أن يكون الأمر مثبتًا على مضيف ShellDB. تُقسَّم قيمة `flags` عند المسافات وتُمرَّر إلى الأمر كوسائط، تليها مسارات البحث.
+
+### عوامل تصفية البحث
+
+التصفية مدعومة حاليًا بالوسوم فقط. للتصفية بالوسوم، مرّر مجلدات الوسوم في `folder_filter`:
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r private -U",
+    "folder_filter": ["___private"]
+  }'
+```

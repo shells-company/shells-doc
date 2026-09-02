@@ -1,0 +1,85 @@
+---
+title: "ShellDB introduction"
+description: "ShellDB is a file database that processes shell commands over indexed files"
+---
+
+## What is ShellDB?
+
+ShellDB is a file database that runs shell search commands over your indexed files.
+
+The `POST /api/search` endpoint runs `grep` by default. Set the optional `command` field on the search payload to run a different search command, such as `rg` or `awk`.
+
+ShellDB also supports file `tagging`. Tagging a file allows you to build filters that join multiple tags together.
+
+## Running ShellDB
+
+```sh
+docker run cdxker/shelldb -p 8080:8080
+```
+
+## Architecture
+
+- Files are stored within `${dataDir}/dataset_id/path/to/file`
+- Tagged files are stored within `${dataDir}/dataset_id/___tag/path/to/file`
+
+## Indexing files
+
+To index a file, send the full file as a payload to `POST /api/index`.
+
+The `dataset` field is the index you add the file into. If the dataset doesn't exist, ShellDB creates one for you.
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/index \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "filename": "test.txt",
+    "file_payload": "override",
+    "tags": []
+  }'
+```
+
+## Searching
+
+Search a dataset with `POST /api/search`. By default, ShellDB runs `grep` with the flags you pass.
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r hello",
+    "folder_filter": []
+  }'
+```
+
+### Using a different search command
+
+Pass the optional `command` field to run another search command instead of `grep`:
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-i hello",
+    "folder_filter": [],
+    "command": "rg"
+  }'
+```
+
+The command must be installed on the ShellDB host. The `flags` value is split on whitespace and passed to the command as arguments, followed by the search paths.
+
+### Search filters
+
+Filtering is currently only supported by tags. To filter with tags, pass the tag folders in `folder_filter`:
+
+```sh
+curl -X POST http://127.0.0.1:8080/api/search \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataset": "550e8400-e29b-41d4-a716-446655440000",
+    "flags": "-r private -U",
+    "folder_filter": ["___private"]
+  }'
+```
