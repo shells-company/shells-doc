@@ -562,17 +562,7 @@
             ]
           },
           {
-            "tab": "API reference",
-            "groups": [
-              {
-                "group": "Endpoint examples",
-                "public": true,
-                "pages": [
-                  "api-reference/endpoint/get",
-                  "api-reference/endpoint/webhook"
-                ]
-              }
-            ]
+            "tab": "API reference"
           },
           {
             "tab": "Larger Poems",
