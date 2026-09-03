@@ -565,15 +565,6 @@
             "tab": "API reference",
             "groups": [
               {
-                "group": "API documentation",
-                "public": true,
-                "pages": [
-                  "snippets/snippet-intro",
-                  "api-reference/introduction",
-                  "api-reference/compact-table-test"
-                ]
-              },
-              {
                 "group": "Endpoint examples",
                 "public": true,
                 "pages": [
