@@ -612,6 +612,7 @@
                 "group": "Other Pages",
                 "pages": [
                   "pause",
+                  "paused",
                   "somehtin",
                   "poems/untitled-page",
                   "poems/spring-cleaning",
@@ -620,9 +621,7 @@
               },
               {
                 "group": "Pause & Stop",
-                "pages": [
-                  "paused"
-                ]
+                "pages": []
               },
               {
                 "group": "Drafts",
