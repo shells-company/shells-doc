@@ -613,13 +613,13 @@
                   {
                     "group": "Pause & Stop",
                     "pages": [
-                      "paused",
                       "pause-2",
                       "poems/untitled-page",
                       "paused-2"
                     ]
                   },
                   "somehtin",
+                  "paused",
                   "poems/spring-cleaning",
                   "poems/mirror"
                 ]
