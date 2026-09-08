@@ -573,8 +573,7 @@
                 "pages": [
                   "poems/fragments",
                   "poems/fragments-two",
-                  "poems/fragments-three",
-                  "poems/fragments-last"
+                  "poems/fragments-three"
                 ]
               },
               "poems/summer-drift",
@@ -613,6 +612,7 @@
                 "pages": [
                   "somehtin",
                   "poems/untitled-page",
+                  "pause",
                   "poems/spring-cleaning",
                   "poems/mirror"
                 ]
@@ -620,7 +620,6 @@
               {
                 "group": "Pause & Stop",
                 "pages": [
-                  "pause",
                   "paused",
                   "pause-2",
                   "paused-2"
