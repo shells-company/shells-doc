@@ -611,7 +611,6 @@
               {
                 "group": "Other Pages",
                 "pages": [
-                  "paused",
                   "somehtin",
                   "poems/untitled-page",
                   "poems/spring-cleaning",
@@ -622,6 +621,7 @@
                 "group": "Pause & Stop",
                 "pages": [
                   "pause",
+                  "paused",
                   "pause-2",
                   "paused-2"
                 ]
