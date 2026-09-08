@@ -3,26 +3,26 @@ title: "fragments-two"
 hidden: true
 ---
 
-# "إلى شظيّتين"
+# "To two fragments"
 
-<Card title="هذا شيء رائع هنا." icon="sparkles">
-  مرحبًا
+<Card title="This is something wonderful here." icon="sparkles">
+  Hello
 </Card>
 
-أشعر وكأن عالمي ينفجر.
+I feel like my world is exploding.
 
 edit its conents
 
-أكره حين ينفجر العالم.<br />يوم التخرّج.<br />كلّ شظايا الحياة التي عرفتُها قد رحلت.
+I hate when the world explodes.<br />Graduation day.<br />All the pieces of the life I knew are gone.
 
-اليوم يبدو هكذا،<br />أصدقائي رحلوا.<br />شظايا تتطاير إلى أطراف الفضاء المختلفة.<br />هل أتشبّث بشظيّة؟<br />أم أمضي إلى مكاني الخاص؟
+Today feels like this,<br />my friends are gone.<br />Fragments flying off to different corners of space.<br />Do I hold onto a fragment?<br />Or do I go to my own place?
 
-أنا دائمًا "آخر من يغادر"<br />أو أوّلهم.<br />لكن هل هذا صحيح دومًا؟
+I'm always "the last to leave"<br />or the first.<br />But is that always true?
 
-إن تركتَ أحدًا، فستشعر دائمًا أنّك الأوّل.<br />وإن احتاجوا إلى وداعك، فأنت الأخير.
+If you leave someone, you'll always feel like the first.<br />And if they need your goodbye, you're the last.
 
-هل تريد فقط مزيدًا من الوقت؟
+Do you just want more time?
 
-ليسوا قد رحلوا تمامًا، لكنّهم رحلوا عن "أنا" الذي كان دائمًا في طور العمل.
+They're not entirely gone, but they're gone from the "me" that was always a work in progress.
 
-ذاك هو "أنا" الذي كان يحتاجهم.<br />والآن لم يبقَ سوى —<br />"عسى ألا يكون وعدًا فارغًا."
+That's the "me" that needed them.<br />And now all that remains is,<br />"May it not be an empty promise."
