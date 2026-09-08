@@ -611,7 +611,6 @@
               {
                 "group": "Other Pages",
                 "pages": [
-                  "pause",
                   "paused",
                   "somehtin",
                   "poems/untitled-page",
@@ -621,7 +620,11 @@
               },
               {
                 "group": "Pause & Stop",
-                "pages": []
+                "pages": [
+                  "pause",
+                  "pause-2",
+                  "paused-2"
+                ]
               },
               {
                 "group": "Drafts",
