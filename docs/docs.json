@@ -562,7 +562,17 @@
             ]
           },
           {
-            "tab": "API reference"
+            "tab": "API reference",
+            "groups": [
+              {
+                "group": "OpenAPI 3.2",
+                "public": true,
+                "openapi": {
+                  "source": "api-reference/openapi-3.2.json",
+                  "directory": "api-reference/openapi-3.2"
+                }
+              }
+            ]
           },
           {
             "tab": "Larger Poems",
