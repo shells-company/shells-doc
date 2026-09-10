@@ -54,6 +54,7 @@
               {
                 "group": "asdf",
                 "pages": [
+                  "stress-validation",
                   "ai-tools/3",
                   "index",
                   "getting-started",
